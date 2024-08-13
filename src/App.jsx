@@ -5,6 +5,7 @@ import Home from './components/home';
 import NavBar from './components/NavBar';
 import Sante from './components/Sante';
 import Servicos from './components/Servico';
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Atividades />
         <hr className="separador" />
         <Contato />
+        <Footer />
       </div>
     </>
   )

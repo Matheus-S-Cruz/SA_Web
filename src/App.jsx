@@ -12,15 +12,16 @@ function App() {
   return (
     <>
       <div>
-      <NavBar/>
-      <Home/>
-      <br/>
-      <Sante/>
-      <br/>
-      <Servicos/>
-      <br/>
-      <Atividades/>
-      <Contato/>
+        <NavBar />
+        <Home />
+        <hr className="separador" />
+        <Sante />
+        <hr className="separador" />
+        <Servicos />
+        <hr className="separador" />
+        <Atividades />
+        <hr className="separador" />
+        <Contato />
       </div>
     </>
   )

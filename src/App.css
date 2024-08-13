@@ -10,6 +10,7 @@ body{
   flex-direction: row;
   display: inline-block;
   margin-left: 30%;
+  margin: auto;
 }
 .logo {
   height: 40px;  
@@ -53,10 +54,12 @@ body{
   margin-top: 40px;
 }
 .sobre {
-  width: 50%;
-  text-align: left;
   padding: 20px;
-  margin-top: 140px;
+  margin: auto;
+  text-align: center;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .integrantes {
   display: flex;
@@ -67,11 +70,16 @@ body{
   flex: 1 0 20%; 
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
   text-align: center;
 }
 
 .integrantes {
+img {
+  width: 497px;
+  height: 392px;
+  object-fit: cover; /* Garante que a imagem não distorça e cobre a área especificada */
+}
+
 h3 {
   margin-bottom: 5px;
 }
@@ -80,3 +88,12 @@ p {
   margin-top: 5px;
 }
 };
+
+hr.separador {
+  background-color: #474037;
+  border: none; /* Remove a borda padrão */
+  height: 10px; /* Ajusta a altura da faixa */
+  width: 100%; /* Faz a faixa ocupar toda a largura disponível */
+  margin: 20px 0; /* Adiciona espaço acima e abaixo da faixa */
+  margin-bottom: none;
+}

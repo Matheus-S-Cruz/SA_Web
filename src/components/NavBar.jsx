@@ -2,7 +2,7 @@ function NavBar() {
     return(
         <div>
             <div className="topnav">
-                <a className="active" href="#home">Home</a>
+                <a className="active" href="#home">Login</a>
                 <a href="#sante">Santé</a>
                 <a href="#servicos">Serviços</a>
                 <a href="#atividades">Atividades</a>

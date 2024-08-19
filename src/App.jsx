@@ -5,7 +5,7 @@ import Home from './components/home';
 import NavBar from './components/NavBar';
 import Sante from './components/Sante';
 import Servicos from './components/Servico';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
 

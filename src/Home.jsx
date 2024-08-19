@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from 'react'
-
+import Cadastro from "./components/Cadastro";
+import './App.css'
 function PageHome() {
     return (
         <div>
@@ -9,9 +10,12 @@ function PageHome() {
             </div>
             <div className='voltar'>
             <Link to="/">
+            <Cadastro/>
+
                 <button className="voltar">
                     Voltar
                 </button>
+
             </Link>
             </div>
         </div>

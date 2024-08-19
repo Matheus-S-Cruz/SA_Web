@@ -123,3 +123,21 @@ hr.separador {
   font-size: 20px;
   border-radius: 20px;
 }
+
+
+/*começando a pagina de cadastro*/
+
+.botoesCadastro{
+  width: auto;
+  height: auto;
+}
+.botoesCadastro button{
+  color: #000000;
+  width: 150px;
+  background-color: #04AA6D;
+  display: flex;
+  text-align: center;
+}
+
+
+/*terminando a pagina de cadastro*/

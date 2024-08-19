@@ -6,13 +6,19 @@ import NavBar from './components/NavBar';
 import Sante from './components/Sante';
 import Servicos from './components/Servico';
 import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
+
+import HomePage from './Home';
 
 function App() {
 
   return (
     <>
-      <div>
+      <div className='App'>
+      <Routes>
+      <Route path="/" element={
+        <>
         <NavBar />
         <Home />
         <hr className="separador" />
@@ -24,6 +30,10 @@ function App() {
         <hr className="separador" />
         <Contato />
         <Footer />
+        </>
+        } />
+        <Route path="home" element={<HomePage />} />
+      </Routes>
       </div>
     </>
   )

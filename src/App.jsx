@@ -12,6 +12,8 @@ import './App.css'
 import HomePage from './Home';
 import Login from './components/Login'
 import PerfilCliente from './components/PerfilCliente'
+import Cadastro from './components/Cadastro'
+import CadastroCuidador from './components/CadastroCuidador'
 
 function App() {
 
@@ -37,6 +39,8 @@ function App() {
         <Route path="home" element={<HomePage />} />
         <Route path="login" element={<Login />} />
         <Route path="user" element={<PerfilCliente />} />
+        <Route path="cadastroCliente" element={<Cadastro />} />
+        <Route path="cadastroCuidador" element={<CadastroCuidador />} />
       </Routes>
       </div>
     </>

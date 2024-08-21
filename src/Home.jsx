@@ -13,19 +13,24 @@ function PageHome() {
                     <Link to="/login">
                         <button onClick='É ctg Teteu'>Entrar</button>
                     </Link>
-
-                    <button onClick='É ctg Teteu'>Cadastrar Cliente</button>
-                    <button onClick='É ctg Teteu'>Cadastrar Cuidador</button>
+                    <Link to="/cadastroCliente">
+                        <button className="voltar">
+                            Cadastrar Cliente
+                        </button>
+                    </Link>
+                    <Link to="/cadastroCuidador">
+                        <button className="voltar">
+                            Cadastrar Cuidador
+                        </button>
+                    </Link>
                 </div>
             </div>
 
             <div className='voltar'>
                 <Link to="/">
-
                     <button className="voltar">
                         Voltar
                     </button>
-
                 </Link>
             </div>
         </div>

@@ -4,10 +4,10 @@ import './App.css'
 import logo from './images/iconsante.png'
 function PageHome() {
     return (
-        <div>
+        <div className="loginecadastro">
             <div className='cadastrotudo'>
                 <div className='cadastrologo'>
-                    <img src={logo} alt="logo-sante" />
+                    <img src={logo} alt="logo-sante"  />
                 </div>
                 <div className='botoesCadastro'>
                     <Link to="/login">

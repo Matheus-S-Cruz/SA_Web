@@ -1,22 +1,32 @@
 import { Link } from "react-router-dom";
 import React from 'react'
-import Cadastro from "./components/Cadastro";
 import './App.css'
+import logo from './images/iconsante.png'
 function PageHome() {
     return (
         <div>
-            <div>
-                <h1>Olá</h1>
+            <div className='cadastrotudo'>
+                <div className='cadastrologo'>
+                    <img src={logo} alt="logo-sante" />
+                </div>
+                <div className='botoesCadastro'>
+                    <Link to="/login">
+                        <button onClick='É ctg Teteu'>Entrar</button>
+                    </Link>
+
+                    <button onClick='É ctg Teteu'>Cadastrar Cliente</button>
+                    <button onClick='É ctg Teteu'>Cadastrar Cuidador</button>
+                </div>
             </div>
+
             <div className='voltar'>
-            <Link to="/">
-            <Cadastro/>
+                <Link to="/">
 
-                <button className="voltar">
-                    Voltar
-                </button>
+                    <button className="voltar">
+                        Voltar
+                    </button>
 
-            </Link>
+                </Link>
             </div>
         </div>
     )

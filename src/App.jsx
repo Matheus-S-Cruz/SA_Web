@@ -10,6 +10,8 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 
 import HomePage from './Home';
+import Login from './components/Login'
+import PerfilCliente from './components/PerfilCliente'
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
         </>
         } />
         <Route path="home" element={<HomePage />} />
+        <Route path="login" element={<Login />} />
+        <Route path="user" element={<PerfilCliente />} />
       </Routes>
       </div>
     </>

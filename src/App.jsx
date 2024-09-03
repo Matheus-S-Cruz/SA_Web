@@ -1,5 +1,4 @@
 import React from 'react'
-import Atividades from './components/Atividades';
 import Contato from './components/Contato';
 import Home from './components/home';
 import NavBar from './components/NavBar';
@@ -29,8 +28,6 @@ function App() {
         <Sante />
         <hr className="separador" />
         <Servicos />
-        <hr className="separador" />
-        <Atividades />
         <hr className="separador" />
         <Contato />
         <Footer />

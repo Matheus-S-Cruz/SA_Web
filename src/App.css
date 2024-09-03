@@ -157,6 +157,11 @@ html {
   border-radius: 10px;
 }
 
+.informacoes {
+  background-color: #E7FCE5;
+  border-radius: 5px;
+}
+
 .footer {
   top: 0;
   padding: 10px;

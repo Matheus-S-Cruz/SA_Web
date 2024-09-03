@@ -13,7 +13,7 @@ function Contato() {
             </div>
             <Link to="/home">
                 <button className="home">
-                    PageHome
+                    Nossa Página
                 </button>
             </Link>
         </div>

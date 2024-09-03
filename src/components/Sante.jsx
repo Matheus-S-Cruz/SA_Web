@@ -1,5 +1,4 @@
-
-
+import '../App.css'
 function Sante() {
     return (
         <div className="sante" id="sante">

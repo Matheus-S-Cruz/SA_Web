@@ -66,10 +66,15 @@ html {
 }
 
 .home {
+  margin-left: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 10%;
+  
+  
+  
 }
 
 .pagina {

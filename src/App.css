@@ -25,27 +25,26 @@ html {
 
 .topnav {
   width: 100%;
-  height: 55px;
+  height: 75px;
   overflow: hidden;
   background-color: #474037;
   border-radius: 14px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ajusta a logo à esquerda e links à direita */
+  justify-content: space-between;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;  /* Alinha os itens ao centro verticalmente */
-  justify-content: space-around; /* Distribui os links igualmente */
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
 }
 
 .logo img {
-  height: 40px; /* Diminui o tamanho da imagem */
-  width: 40px;  /* Mantém a imagem proporcional */
-  border-radius: 50%; /* Torna a imagem circular */
-  margin-right: 20px; /* Espaço entre a logo e o primeiro link */
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
 }
 
 .topnav a {
@@ -53,11 +52,12 @@ html {
   text-align: center;
   padding: 0 16px;
   text-decoration: none;
-  font-size: 18px; /* Ajuste o tamanho do texto */
-  height: 55px;
-  line-height: 55px; /* Centraliza verticalmente o texto */
+  font-size: 42px;
+  height: 75px;
+  line-height: 75px;
   display: flex;
-  align-items: center; /* Centraliza verticalmente em relação ao link */
+  align-items: center;
+  width: auto;
 }
 
 .topnav a:hover {

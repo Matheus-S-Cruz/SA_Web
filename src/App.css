@@ -128,11 +128,13 @@ html {
   border-radius: 20px;
   position: relative;
   margin-top: 2rem;
+  width: 100%; /* Ocupa a largura total do contêiner pai */
 }
 
-.servicos .oferecemos img {
-  width: 80%;
-  max-width: 800px;
+.servicos .oferecemos img,
+.servicos .foto img {
+  width: 100%; /* A largura das imagens será igual à largura da div servicos */
+  max-width: 100%; /* Garante que as imagens não excedam a largura da div */
   margin: 0 auto;
   display: block;
 }
@@ -152,7 +154,6 @@ html {
 
 .fotosservicos .foto img {
   width: 100%;
-  max-width: 1200px;
   border-radius: 10px;
 }
 

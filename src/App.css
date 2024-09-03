@@ -114,18 +114,6 @@ html {
   }
 } */
 
-hr.separador {
-  background-color: #474037;
-  border: none;
-  height: 75px;
-  width: 100%;
-  margin: 20px 0;
-  margin-bottom: none;
-  overflow: hidden;
-  border-radius: 14px;
-  display: flex;
-}
-
 .footer {
   top: 0;
   padding: 10px;

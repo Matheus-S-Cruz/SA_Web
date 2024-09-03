@@ -1,15 +1,21 @@
+import Sante from '../images/sante.png'
+
 function NavBar() {
-    return(
+    return (
         <div>
             <div className="topnav">
-                <a className="active" href="#home">Login</a>
-                <a href="#sante">Santé</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#atividades">Atividades</a>
-                <a href="#contato">Contato</a>
+                <div className="nav-links">
+                    <a href="#home" className="logo">
+                        <img src={Sante} alt="Sante" />
+                    </a>
+                    <a href="#sante">Santé</a>
+                    <a href="#atividades">Atividades</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#servicos">Serviços</a>
+                </div>
             </div>
         </div>
-        );
-  }
-  
-  export default NavBar;
+    );
+}
+
+export default NavBar;

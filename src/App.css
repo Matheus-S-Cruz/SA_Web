@@ -117,14 +117,13 @@ html {
 hr.separador {
   background-color: #474037;
   border: none;
-  /* Remove a borda padrão */
-  height: 10px;
-  /* Ajusta a altura da faixa */
+  height: 75px;
   width: 100%;
-  /* Faz a faixa ocupar toda a largura disponível */
   margin: 20px 0;
-  /* Adiciona espaço acima e abaixo da faixa */
   margin-bottom: none;
+  overflow: hidden;
+  border-radius: 14px;
+  display: flex;
 }
 
 .footer {

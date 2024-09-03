@@ -74,9 +74,6 @@ html {
   justify-content: center;
   align-items: center;
   width: 10%;
-  
-  
-  
 }
 
 .pagina {
@@ -144,17 +141,6 @@ html {
   margin: 1rem auto;
   padding: 0 1rem;
   max-width: 800px;
-}
-
-.fotosservicos {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.fotosservicos .foto img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .informacoes {

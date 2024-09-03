@@ -9,7 +9,6 @@ function NavBar() {
                         <img src={Sante} alt="Sante" />
                     </a>
                     <a href="#sante">Santé</a>
-                    <a href="#atividades">Atividades</a>
                     <a href="#contato">Contato</a>
                     <a href="#servicos">Serviços</a>
                 </div>

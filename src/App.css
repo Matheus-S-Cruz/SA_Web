@@ -1,6 +1,7 @@
 body {
   color: #000000;
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 html {
@@ -27,7 +28,7 @@ html {
   width: 100%;
   height: 75px;
   overflow: hidden;
-  background-color: #474037;
+  background-color: #474036;
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -90,28 +91,6 @@ html {
   background-size: 100% 100%; 
 }
 
-.sobre {
-  padding: 20px;
-  text-align: center;
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5em;
-  color: #333;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  border-bottom: 2px solid #333;
-  max-width: 80%;
-  position: relative;
-  z-index: 1;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
 .integrantes {
   display: flex;
   flex-wrap: wrap;
@@ -141,24 +120,46 @@ html {
   }
 } */
 
-hr.separador {
-  background-color: #474037;
-  border: none;
-  /* Remove a borda padrão */
-  height: 10px;
-  /* Ajusta a altura da faixa */
+.servicos {
+  background-color: #474036;
+  padding: 2rem 0;
+  color: #ffffff;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.servicos .oferecemos img {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.servicos .oferecemosp {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  max-width: 800px;
+}
+
+.fotosservicos {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.fotosservicos .foto img {
   width: 100%;
-  /* Faz a faixa ocupar toda a largura disponível */
-  margin: 20px 0;
-  /* Adiciona espaço acima e abaixo da faixa */
-  margin-bottom: none;
+  max-width: 1200px;
+  border-radius: 10px;
 }
 
 .footer {
   top: 0;
   padding: 10px;
   text-align: center;
-  background-color: #474037;
+  background-color: #474036;
   height: auto;
   color: #ffffff;
   font-size: 20px;

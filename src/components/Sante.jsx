@@ -1,7 +1,4 @@
-import aleksander from '../images/aleksander.png'
-import matheus from '../images/matheus.png'
-import vinicius from '../images/vinicius.png'
-import ian from '../images/ian.png'
+
 
 function Sante() {
     return (

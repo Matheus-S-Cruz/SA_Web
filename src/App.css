@@ -55,19 +55,41 @@ body {
 }
 
 .pagina {
+  position: relative;
+  min-height: 100vh;
   display: grid;
   place-items: center;
-  margin-top: 40px;
+  padding: 20px;
+  overflow: hidden;
+  background-image: url('../images/velhos.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; 
 }
+
+
 
 .sobre {
   padding: 20px;
-  margin: auto;
   text-align: center;
   font-family: "Julius Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.5em;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #333;
+  max-width: 80%;
+  position: relative;
+  z-index: 1;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .integrantes {
   display: flex;
@@ -125,59 +147,140 @@ hr.separador {
 }
 
 
-/*começando a pagina de cadastro*/
-.loginecadastro{
+/* Página de Cadastro */
+.loginecadastro {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0); /* Transparente */
-  z-index: 9999; /* Coloca a div acima de todos os outros elementos */
-
-}
-.cadastrologo img{
+  background: linear-gradient(to bottom right, #ffffff, #0ee999); /* Degradê branco para azul claro */
+  display: flex;
+  justify-content: center;
   align-items: center;
-width: 30%;
-
+  overflow: hidden; /* Oculta barras de rolagem */
 }
 
-.botoesCadastro{
-  align-items: center;
-  width: auto;
-  height: auto;
+.cadastroContainer {
+  background: #ffffff;
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  padding: 1rem; /* Padding ajustado para espaçamento interno */
+  max-width: 400px; /* Largura máxima do contêiner */
+  width: 90%; /* Largura responsiva */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+  height: 500px; /* Altura ajustada para um contêiner compacto */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza os botões horizontalmente */
-  gap: 45px; /* Espaçamento entre os botões */
-  padding: 1%;
- 
- 
-  
-  
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
 }
-.botoesCadastro button{
-    
-    width:260px;
-    position: relative;
-    padding: 12px 35px;
-    background: #04AA6D;
-    font-size: 17px;
-    font-weight: 500;
-    color: #474037;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    box-shadow: 0 0 0 #fec1958c;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+
+.cadastrologo {
+  margin-top: 5rem; /* Ajuste para mover o ícone mais para baixo */
 }
-.botoesCadastro button:hover{
-  background-color: #0ee999;
-  transition: 0.6s;
-  width: 270px;
-  height: 56px;
-font-size: larger;
+
+.cadastrologo img {
+  display: block;
+  margin: 0 auto 1rem auto; /* Margem inferior para separação */
+  width: 50%; /* Ajuste o tamanho da logo conforme necessário */
 }
+
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaçamento entre os elementos */
+  width: 100%; /* Largura total do formulário */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 0.9rem; /* Tamanho da fonte do label */
+  color: #333;
+  margin-bottom: 0.5rem; /* Margem abaixo do label */
+}
+
+.inputGroup input {
+  padding: 0.75rem; /* Padding dos campos de entrada */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 0.9rem; /* Tamanho da fonte do input */
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem; /* Padding dos botões */
+  background-color: #04AA6D; /* Cor verde */
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 0.9rem; /* Tamanho da fonte dos botões */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0ee999; /* Cor verde mais clara ao passar o mouse */
+  transform: scale(1.02);
+}
+
+.opcoesCadastro {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.googleButton {
+  background-color: #4285F4;
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 0.75rem; /* Padding */
+  font-size: 0.9rem; /* Tamanho da fonte do botão Google */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem; /* Margem inferior */
+}
+
+.googleButton:hover {
+  background-color: #357ae8;
+}
+
+.opcoesCadastro p {
+  margin: 1rem 0 0;
+}
+
+.opcoesCadastro a {
+  color: #04AA6D;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.opcoesCadastro a:hover {
+  text-decoration: underline;
+}
+
+.voltar {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.voltar button {
+  background-color: #f44336;
+  padding: 0.75rem; /* Padding */
+  font-size: 0.9rem; /* Tamanho da fonte do botão Voltar */
+}
+
+.voltar button:hover {
+  background-color: #e53935;
+}
+
+
 
 
 /*terminando a pagina de cadastro*/

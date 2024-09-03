@@ -1,14 +1,10 @@
 import velhos from "../images/velhos.png"
-import sante from "../images/sante.png"
+import santcasa from "../images/santcasa.png"
 import '../App.css'
 function Home() {
   return (
     <div>
-      <div className='pagina' id="home">
-        <img src={sante} alt="sante" />
-        <br />
-        <img src={velhos} alt="velhos" />
-
+       <div className='pagina' id="home" style={{ backgroundImage: `url(${velhos})` }}>
         <br /><br />
         <div className="container">
           <div id="sobre" className="sobre">

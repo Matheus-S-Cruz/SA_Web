@@ -103,12 +103,12 @@ body {
   text-align: center;
 }
 
-.integrantes {
+/* .integrantes {
   img {
     width: 497px;
     height: 392px;
     object-fit: cover;
-    /* Garante que a imagem não distorça e cobre a área especificada */
+     Garante que a imagem não distorça e cobre a área especificada 
   }
 
   h3 {
@@ -118,9 +118,7 @@ body {
   p {
     margin-top: 5px;
   }
-}
-
-;
+} */
 
 hr.separador {
   background-color: #474037;

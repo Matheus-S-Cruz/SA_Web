@@ -10,22 +10,18 @@ function Sante() {
             </div>
             <div className="integrantes">
                 <div className="integrante">
-                    <img src={aleksander} alt="aleksander" />
                     <h3>Pedro Aleksander</h3>
                     <p>Designer</p>
                 </div>
                 <div className="integrante">
-                    <img src={matheus} alt="matheus" />
                     <h3>Matheus Cruz</h3>
                     <p>Líder e Desenvolvedor Back-End</p>
                 </div>
                 <div className="integrante">
-                    <img src={vinicius} alt="vinicius" /> 
                     <h3>Vinicius de Marco</h3>
                     <p>Desenvolvedor Back e Front-End</p>
                 </div>
                 <div className="integrante">
-                    <img src={ian} alt="ian" />
                     <h3>Ian Novatzki</h3>
                     <p>Designer</p>
                 </div>

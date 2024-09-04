@@ -20,9 +20,13 @@ function PageHome() {
                         <label htmlFor="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
                     </div>
+<<<<<<< HEAD
                     <Link to="/user">
                         <button className="login">Entrar</button>
                     </Link>
+=======
+                    <button className="entrarButton" type="submit">Entrar</button>
+>>>>>>> 9e2ae2c24990140ff6d430b95d944f7db09f397e
                 </form>
                 <div className="opcoesCadastro">
                     <Link to ="/cuidador">

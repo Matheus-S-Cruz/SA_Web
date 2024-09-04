@@ -5,6 +5,14 @@ body {
   background-color: #F0F8EF;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,9 +31,10 @@ html {
 }
 
 .topnav {
+  width: 100%;
+  height: 75px;
   overflow: hidden;
   background-color: #474036;
-  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,14 +58,12 @@ html {
   text-align: center;
   padding: 0 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 28px;
   height: 75px;
   line-height: 75px;
   display: flex;
   align-items: center;
   width: auto;
-  margin-right: auto;
-  
 }
 
 .topnav a:hover {
@@ -147,15 +154,7 @@ html {
 }
 
 .informacoes {
-  background-color: #E7FCE5;
   border-radius: 5px;
-  font-size: 20px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  
-  
 }
 
 .footer {
@@ -171,48 +170,6 @@ html {
 
 
 /* Página de Cadastro */
-.cadastrocontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.opcoes {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.opcao {
-  color: white; /* Cor do texto */
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  width: 150px; /* Largura fixa para os botões */
-  text-align: center;
-  margin: 0 10px; /* Espaçamento horizontal entre os botões */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease;
-}
-
-.opcao.ativo {
-  background-color: #04AA6D; /* Cor de fundo do botão ativo */
-}
-
-.opcao.ativo:hover {
-  background-color: #35c48c; /* Cor mais clara ao passar o mouse sobre o botão ativo */
-}
-
-.opcao.inativo {
-  background-color: transparent; /* Mesma cor de fundo da tela para botões inativos */
-  color: black; /* Cor do texto para o botão inativo */
-}
-
-.opcao.inativo:hover {
-  background-color: #f0f0f0; /* Cor de fundo ligeiramente mais clara ao passar o mouse */
-}
-
 .loginecadastro {
   position: relative; 
   min-height: 100vh; 
@@ -231,7 +188,7 @@ html {
   top: 0;
   left: 0;
   width: 100%; 
-  height: 200vh; 
+  height: 100%; 
   background: linear-gradient(to bottom right, #ffffff, #0ee999); 
   z-index: -1; 
 }
@@ -241,8 +198,8 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 96%; 
-  height: 90%; 
+  width: 100%; 
+  height: 100%; 
   background-image: url('../src/images/loginvelhos.png');
   background-size: cover; 
   background-position: center; 
@@ -257,34 +214,33 @@ html {
   border-radius: 12px; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
   padding: 1.5rem; 
-  width: 65%; 
+  width: 40%; 
   box-sizing: border-box; 
-  min-height: 300px; 
-  max-height: 500px; 
+  min-height: 350px; 
+  max-height: 450px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  backdrop-filter: blur(8px); /* Efeito com desfoque */
   border: 1px solid rgba(0, 0, 0, 0.15); 
   transition: all 0.3s ease; 
 }
 
-.cadastroContainer:hover {
-  backdrop-filter: blur(6px); 
+.cadastroContainer:hover {  
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2); 
   transform: scale(1.02); 
 }
 
 .cadastrologo {
-  margin-top: 2rem; 
+  margin-top: 4 rem; 
+  padding-top: 8rem;
 }
 
 .cadastrologo img {
-  display: block;
+  display: auto;
   margin: 0 auto 1rem auto; /* Margem inferior para separação */
-  width: 50%; /* Ajuste o tamanho da logo conforme necessário */
+  width: 30%; /* Ajuste o tamanho da logo conforme necessário */
 }
 
 .formCadastro {
@@ -295,6 +251,9 @@ html {
 }
 
 .inputGroup {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: column;
 }
@@ -313,7 +272,7 @@ html {
 }
 
 button {
-  width: 100%;
+  width: 100%;  
   padding: 0.75rem; /* Padding dos botões */
   background-color: #04AA6D; /* Cor verde */
   color: #fff;
@@ -325,8 +284,23 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
+.entrarButton{
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #91CA8A; /* Cor verde */
+  border: none;
+  color: #000000;
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 0.75rem;
+  font-size: 0.9rem; /* Tamanho da fonte dos botões */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
 button:hover {
-  background-color: #0ee999; /* Cor verde mais clara ao passar o mouse */
+  background-color: #91CA8A; /* Cor verde mais clara ao passar o mouse */
   transform: scale(1.02);
 }
 
@@ -336,19 +310,22 @@ button:hover {
 }
 
 .googleButton {
-  background-color: #4285F4;
-  color: #fff;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #5286F1; 
   border: none;
+  color: #000000;
   border-radius: 8px; /* Bordas arredondadas */
-  padding: 0.75rem; /* Padding */
-  font-size: 0.9rem; /* Tamanho da fonte do botão Google */
+  padding: 0.75rem;
+  font-size: 0.9rem; /* Tamanho da fonte dos botões */
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 1rem; /* Margem inferior */
 }
 
+
 .googleButton:hover {
-  background-color: #357ae8;
+  background-color: #5286F1;
 }
 
 .opcoesCadastro p {

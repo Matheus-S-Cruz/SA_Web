@@ -9,9 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#root {
-  padding: 2rem;
-}
 
 .contato {
   display: flex;
@@ -128,7 +125,7 @@ html {
   background-color: #474036;
   padding: 2rem 0;
   color: #ffffff;
-  border-radius: 20px;
+  border-radius: 25px;
   position: relative;
   margin-top: 2rem;
   width: 100%; /* Ocupa a largura total do contêiner pai */
@@ -149,12 +146,7 @@ html {
   max-width: 800px;
 }
 
-.doctor {
-
-}
-
 .informacoes {
-  background-color: #E7FCE5;
   border-radius: 5px;
 }
 

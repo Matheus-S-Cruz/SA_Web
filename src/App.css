@@ -172,36 +172,71 @@ html {
 
 /* Página de Cadastro */
 .loginecadastro {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #ffffff, #0ee999); /* Degradê branco para azul claro */
+  position: relative; 
+  min-height: 100vh; 
+  background-color: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Oculta barras de rolagem */
+  overflow: hidden;
+  padding: 2rem 0;
+  z-index: 0; 
+}
+
+.loginecadastro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 200vh; 
+  background: linear-gradient(to bottom right, #ffffff, #0ee999); 
+  z-index: -1; 
+}
+
+.loginecadastro::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96%; 
+  height: 90%; 
+  background-image: url('../src/images/loginvelhos.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%); 
+  z-index: 0; 
+  border-radius: 20px; 
 }
 
 .cadastroContainer {
-  background: #ffffff;
-  border-radius: 12px; /* Bordas arredondadas */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
-  padding: 1rem; /* Padding ajustado para espaçamento interno */
-  max-width: 400px; /* Largura máxima do contêiner */
-  width: 90%; /* Largura responsiva */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
-  height: 500px; /* Altura ajustada para um contêiner compacto */
+  background: rgba(255, 255, 255, 0.85); 
+  border-radius: 12px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
+  padding: 1.5rem; 
+  width: 65%; 
+  box-sizing: border-box; 
+  min-height: 300px; 
+  max-height: 500px; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-y: auto; /* Permite rolagem vertical se necessário */
+  z-index: 1;
+  backdrop-filter: blur(8px); /* Efeito com desfoque */
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s ease; 
+}
+
+.cadastroContainer:hover {
+  backdrop-filter: blur(6px); 
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02); 
 }
 
 .cadastrologo {
-  margin-top: 5rem; /* Ajuste para mover o ícone mais para baixo */
+  margin-top: 2rem; 
 }
 
 .cadastrologo img {

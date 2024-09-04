@@ -17,6 +17,9 @@ html {
   scroll-behavior: smooth;
 }
 
+.lemonada {
+  font-family: 'Lemonada', cursive;
+}
 
 .contato {
   display: flex;
@@ -24,6 +27,12 @@ html {
   display: inline-block;
   margin-left: 30%;
   margin: auto;
+  margin-bottom: 30px;
+}
+
+.h2contato {
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .logo {
@@ -109,6 +118,7 @@ html {
   margin: 10px;
   padding: 10px;
   text-align: center;
+  font-family: 'Lemonada', cursive;
 }
 
 /* .integrantes {
@@ -129,32 +139,94 @@ html {
 } */
 
 .servicos {
-  background-color: #474036;
   padding: 2rem 0;
   color: #ffffff;
-  border-radius: 25px;
   position: relative;
-  margin-top: 2rem;
-  width: 100%; /* Ocupa a largura total do contêiner pai */
+  width: 100%;
 }
 
-.servicos .oferecemos img,
-.servicos .foto img {
-  width: 100%; /* A largura das imagens será igual à largura da div servicos */
-  max-width: 100%; /* Garante que as imagens não excedam a largura da div */
-  margin: 0 auto;
+.servicos .fotoservicos {
+  display: flex;
+  flex-direction: column;
+}
+
+.foto {
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.forest-container img,
+.piscina-container img,
+.doctor-container img {
+  width: 100%;
   display: block;
 }
 
-.servicos .oferecemosp {
+.text-container {
+  position: absolute;
+  padding: 15px;
+  background-color: rgba(0, 128, 0, 0.6); /* Fundo verde com transparência */
+  color: white;
+  border-radius: 10px;
+  max-width: 450px;
+  font-size: 20px;
+}
+
+.text-container.left {
+  left: 5%;
+  bottom: 10%;
+}
+
+.text-container.right {
+  right: 5%;
+  bottom: 10%;
+  background-color: rgba(0, 122, 128, 0.6); /* Fundo verde com transparência */
+}
+
+.text-container.doctor {
+  left: 5%;
+  bottom: 10%;
+  background-color: rgba(201, 1, 1, 0.6); /* Fundo verde com transparência */
+}
+
+.nossosservicos {
+  background-color: #474036;
+}
+
+.oferecemos img {
+  width: 100%;
+  height: auto;
+}
+
+.oferecemosp {
   font-size: 1.2rem;
   margin: 1rem auto;
-  padding: 0 1rem;
   max-width: 800px;
+  text-align: left;
+  text-decoration: underline;
+  margin-right: 47%;
+}
+
+.pservicos-container {
+  background: linear-gradient(to bottom, #95C88E, #689662); 
+  margin: 0 auto; /* Centraliza o contêiner */
+  max-width: 1200px;
+  padding: 1rem; /* Adiciona um espaçamento interno */
+  border-radius: 10px;
+}
+
+.pservicos {
+  color: #000000;
+  text-align: center;
+  font-family: 'Lemonada', cursive;
 }
 
 .informacoes {
-  border-radius: 5px;
+  border-radius: 20px;
+  background-color: #bbfae3;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .footer {
@@ -165,7 +237,7 @@ html {
   height: auto;
   color: #ffffff;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 4px;
 }
 
 

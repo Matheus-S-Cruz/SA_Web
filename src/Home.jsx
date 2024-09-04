@@ -20,7 +20,7 @@ function PageHome() {
                         <label htmlFor="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
                     </div>
-                    <button type="submit">Entrar</button>
+                    <button className="entrarButton" type="submit">Entrar</button>
                 </form>
                 <div className="opcoesCadastro">
                     <button className="googleButton">Entrar com Google</button>

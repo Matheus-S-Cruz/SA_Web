@@ -342,6 +342,53 @@ button:hover {
   text-decoration: underline;
 }
 
+.perfil-cuidador-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa a altura total da tela */
+}
+
+.perfil-cliente-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa a altura total da tela */
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%; /* Largura dos campos */
+  margin: 0 auto;
+}
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px; /* Espaçamento entre os campos */
+}
+
+.campo-nome {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 40%; /* Largura dos nomes dos campos */
+}
+
+.campo-valor {
+  width: 60%; /* Largura dos valores dos campos */
+}
+
+.voltarhome {
+  margin-top: 1rem;
+  text-align: center;
+}
+
 .voltar {
   margin-top: 1rem;
   text-align: center;

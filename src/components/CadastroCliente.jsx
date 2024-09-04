@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-function CadastroCuidador({ cpf, email, senha, senhaRep, area, instituicao }) {
+function CadastroCliente({ cpf, email, senha, senhaRep, restricao, instituicao }) {
   return (
     <div className="cadastrocard">
       <div>
         <div>
-          <label>
+        <label>
             <p className="cpf">{cpf}</p>
             <input name="cpf" placeholder="CPF" />
           </label>
@@ -20,8 +20,8 @@ function CadastroCuidador({ cpf, email, senha, senhaRep, area, instituicao }) {
             <input name="senhaRep" placeholder="Repita a senha" />
           </label>
           <label>
-            <p className="area">{area}</p>
-            <input name="area" placeholder="Area cuidadora" />
+            <p className="restricao">{restricao}</p>
+            <input name="restricao" placeholder="Especificações e Restrições" />
           </label>
           <label>
             <p className="instituicao">{instituicao}</p>
@@ -33,4 +33,4 @@ function CadastroCuidador({ cpf, email, senha, senhaRep, area, instituicao }) {
   );
 }
 
-export default CadastroCuidador;
+export default CadastroCliente;

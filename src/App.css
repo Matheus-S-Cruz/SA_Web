@@ -22,8 +22,6 @@ html {
 }
 
 .topnav {
-  width: 100%;
-  height: 75px;
   overflow: hidden;
   background-color: #474036;
   border-radius: 14px;
@@ -50,12 +48,14 @@ html {
   text-align: center;
   padding: 0 16px;
   text-decoration: none;
-  font-size: 28px;
+  font-size: 17px;
   height: 75px;
   line-height: 75px;
   display: flex;
   align-items: center;
   width: auto;
+  margin-right: auto;
+  
 }
 
 .topnav a:hover {
@@ -145,7 +145,15 @@ html {
 }
 
 .informacoes {
+  background-color: #E7FCE5;
   border-radius: 5px;
+  font-size: 20px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+  
 }
 
 .footer {
@@ -161,6 +169,48 @@ html {
 
 
 /* Página de Cadastro */
+.cadastrocontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.opcao {
+  color: white; /* Cor do texto */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px; /* Largura fixa para os botões */
+  text-align: center;
+  margin: 0 10px; /* Espaçamento horizontal entre os botões */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease;
+}
+
+.opcao.ativo {
+  background-color: #04AA6D; /* Cor de fundo do botão ativo */
+}
+
+.opcao.ativo:hover {
+  background-color: #35c48c; /* Cor mais clara ao passar o mouse sobre o botão ativo */
+}
+
+.opcao.inativo {
+  background-color: transparent; /* Mesma cor de fundo da tela para botões inativos */
+  color: black; /* Cor do texto para o botão inativo */
+}
+
+.opcao.inativo:hover {
+  background-color: #f0f0f0; /* Cor de fundo ligeiramente mais clara ao passar o mouse */
+}
+
 .loginecadastro {
   position: relative; 
   min-height: 100vh; 

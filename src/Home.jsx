@@ -24,7 +24,7 @@ function PageHome() {
                 </form>
                 <div className="opcoesCadastro">
                     <button className="googleButton">Entrar com Google</button>
-                    <p>Não tem uma conta? <Link to="/cadastroCliente">Crie uma conta</Link></p>
+                    <p>Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link></p>
                 </div>
                 <div className="voltar">
                     <Link to="/">

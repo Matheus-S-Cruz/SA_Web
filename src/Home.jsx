@@ -20,10 +20,14 @@ function PageHome() {
                         <label htmlFor="senha">Senha:</label>
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
                     </div>
-                    <button type="submit">Entrar</button>
+                    <Link to="/user">
+                        <button className="login">Entrar</button>
+                    </Link>
                 </form>
                 <div className="opcoesCadastro">
-                    <button className="googleButton">Entrar com Google</button>
+                    <Link to ="/cuidador">
+                        <button className="googleButton">Entrar com Google</button>
+                    </Link>
                     <p>Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link></p>
                 </div>
                 <div className="voltar">

@@ -501,7 +501,7 @@ button:hover{
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Posiciona fora da tela inicialmente */
+  left: -350px; /* Posiciona fora da tela inicialmente */
   width: 400px;
   height: 100%;
   background-color: #5286F1;
@@ -714,4 +714,51 @@ button:hover{
 
 .cuidadores-table tr:hover {
   background-color: #f1f1
+}
+
+.cronograma {
+  display: flex;
+}
+
+.conteudo {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.dias-da-semana {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dia {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dia.selecionado {
+  background-color: #91CA8A;
+  color: white;
+}
+
+.cronograma-detalhes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.atividades, .cuidadores {
+  width: 48%;
+}
+
+.atividades ul, .cuidadores ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.atividades li, .cuidadores li {
+  margin-bottom: 10px;
 }

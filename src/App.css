@@ -302,9 +302,9 @@ html {
   background: rgba(255, 255, 255, 0.9); 
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 0, 0.1); 
-  padding: 0rem; 
-  width: 60%; 
-  max-width: 600px; 
+  padding: 2rem; /* Aumenta o padding ao redor do conteúdo */
+  width: 80%; /* Aumenta a largura do contêiner */
+  max-width: 800px; /* Ajusta a largura máxima se necessário */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -369,7 +369,7 @@ button {
   width: 100%; 
   background-color: #91CA8A;
   max-width: 300px; 
-  margin: 0.5rem auto;
+  margin: 1rem auto; /* Ajusta a margem ao redor do botão */
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 1rem; 
@@ -581,4 +581,52 @@ button:hover{
 
 .modal-content button:hover {
   opacity: 0.9;
+}
+
+/* Estilo para o contêiner dos botões */
+.opcoes {
+  display: flex;
+  justify-content: space-between; /* Garante que o espaçamento entre os botões seja igual */
+  gap: 1rem; /* Espaçamento opcional entre os botões, pode ajustar conforme necessário */
+  margin-top: 1rem;
+}
+
+/* Estilo para os botões de seleção */
+.opcoes button {
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff; /* Cor de fundo padrão (inativo) */
+  color: #000000; /* Cor do texto padrão */
+  border: 2px solid #dcdcdc; /* Borda padrão */
+}
+
+.opcoes button.ativo {
+  background-color: #4CAF50; /* Cor de fundo quando ativo (verde) */
+  color: #ffffff; /* Cor do texto quando ativo */
+  border: 2px solid #4CAF50; /* Borda verde quando ativo */
+}
+
+.opcoes button.inativo {
+  background-color: #ffffff; /* Cor de fundo quando inativo */
+  color: #000000; /* Cor do texto quando inativo */
+  border: 2px solid #dcdcdc; /* Borda padrão */
+}
+
+#project {
+  background-image: url('./images/intheforest.png');
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+  height: 100vh; /* Define a altura da seção */
+  display: flex; /* Permite o uso de flexbox */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
 }

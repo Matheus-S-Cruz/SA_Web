@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CadastroCuidador({ cpf, email, senha, senhaRep, area, instituicao }) {
   return (
@@ -28,6 +29,9 @@ function CadastroCuidador({ cpf, email, senha, senhaRep, area, instituicao }) {
             <input name="instituicao" placeholder="Instituição cuidadora" />
           </label>
         </div>
+        <Link to="/cuidador">
+          <button className="entrar">Cadastrar-se</button>
+        </Link>
       </div>
     </div>
   );

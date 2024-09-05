@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function CadastroCliente({ cpf, email, senha, senhaRep, restricao, instituicao }) {
   return (
     <div className="cadastrocard">
       <div>
         <div>
-        <label>
+          <label>
             <p className="cpf">{cpf}</p>
             <input name="cpf" placeholder="CPF" />
           </label>
@@ -28,6 +29,9 @@ function CadastroCliente({ cpf, email, senha, senhaRep, restricao, instituicao }
             <input name="instituicao" placeholder="Instituição cuidadora" />
           </label>
         </div>
+        <Link to="/user">
+          <button className="entrar">Cadastrar-se</button>
+        </Link>
       </div>
     </div>
   );

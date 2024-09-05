@@ -30,11 +30,12 @@ function Cadastro() {
 
     return (
         <section id="project">
-            <div className="cadastrocontainer">
+            <div className="cadastroContainer">
                 <div>
                     <h2 id="materias">
-                        Cadastre-se
+                    Crie sua conta na Santé!
                     </h2>
+                    <p>Cadastrar-se como:</p>
                 </div>
 
                 <div className="opcoes">

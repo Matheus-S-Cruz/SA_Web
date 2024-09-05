@@ -40,7 +40,7 @@ function SidebarCuidador() {
           </div>
           <span className="sidebar-text">Cronogramas</span>
         </Link>
-        <Link to="/sair" className="sidebar-link">
+        <Link to="/home" className="sidebar-link">
           <div className="sidebar-icon">
             <img src={sair} alt="sair" />
           </div>

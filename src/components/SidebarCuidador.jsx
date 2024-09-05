@@ -28,13 +28,13 @@ function SidebarCuidador() {
           </div>
           <span className="sidebar-text">Buscar</span>
         </Link>
-        <Link to="/cuidadores" className="sidebar-link">
+        <Link to="/clientes" className="sidebar-link">
           <div className="sidebar-icon">
             <img src={lista} alt="lista" />
           </div>
-          <span className="sidebar-text">Lista de Cuidadores</span>
+          <span className="sidebar-text">Lista de Clientes</span>
         </Link>
-        <Link to="/cronogramas" className="sidebar-link">
+        <Link to="/cronogramacuidador" className="sidebar-link">
           <div className="sidebar-icon">
             <img src={cronograma} alt="cronograma" />
           </div>

@@ -27,7 +27,7 @@ function Sidebar() {
           </div>
           <span className="sidebar-text">Lista de Cuidadores</span>
         </Link>
-        <Link to="/cronogramas" className="sidebar-link">
+        <Link to="/cronogramacliente" className="sidebar-link">
           <div className="sidebar-icon">
             <img src={cronograma} alt="cronograma" />
           </div>

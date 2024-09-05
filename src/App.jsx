@@ -9,6 +9,10 @@ import HomePage from './Home';
 import PerfilCuidador from './components/PerfilCuidador';
 import PerfilCliente from './components/PerfilCliente'
 import Cadastro from './components/Cadastro'
+import ListarCuidadores from './components/ListarCuidadores';
+import ListarClientes from './components/ListarClientes';
+import CronogramaCliente from './components/CronogramaCliente';
+import CronogramaCuidador from './components/CronogramaCuidador';
 
 function App() {
 
@@ -29,6 +33,10 @@ function App() {
           <Route path="user" element={<PerfilCliente />} />
           <Route path="cuidador" element={<PerfilCuidador />} />
           <Route path="cadastro" element={<Cadastro />} />
+          <Route path="cuidadores" element={<ListarCuidadores />} />
+          <Route path="clientes" element={<ListarClientes />} />
+          <Route path='cronogramacliente' element={<CronogramaCliente />} />
+          <Route path='cronogramacuidador' element={<CronogramaCuidador />} />
         </Routes>
       </div>
     </>

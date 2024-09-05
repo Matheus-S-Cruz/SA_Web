@@ -247,11 +247,25 @@ html {
   min-height: 100vh; 
   background-color: #ffffff; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
   overflow: hidden;
   padding: 2rem 0;
   z-index: 0; 
+}
+
+.loginsantcasa{
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 2; 
+}
+
+.loginsantcasa img {
+  width: 100%; 
+  margin-top: 1rem;
 }
 
 .loginecadastro::before {
@@ -272,7 +286,7 @@ html {
   left: 50%;
   width: 95%; 
   height: 75%; 
-  margin-top: auto;
+  margin-bottom: 2rem;
   background-image: url('../src/images/loginvelhos.png');
   background-size: cover; 
   background-position: center; 
@@ -283,98 +297,126 @@ html {
 }
 
 .cadastroContainer {
-  background: rgba(255, 255, 255, 0.85); 
-  border-radius: 12px; 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
-  padding: 1.5rem; 
-  width: 40%; 
-  box-sizing: border-box; 
-  min-height: 350px; 
-  max-height: 450px; 
+  margin-bottom: 8rem;
+  margin-top: 10rem;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 0, 0.1); 
+  padding: 0rem; 
+  width: 60%; 
+  max-width: 600px; 
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  border: 1px solid rgba(0, 0, 0, 0.15); 
+  border: 1px solid rgba(0, 0, 0, 0.1); 
   transition: all 0.3s ease; 
 }
 
-.cadastroContainer:hover {  
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.2); 
+.cadastroContainer:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
   transform: scale(1.02); 
 }
 
 .cadastrologo {
-  margin-top: 8rem; 
-  padding-top: 0rem;
+  margin-top: 3rem; /* Posiciona logo mais para cima */
+  width: 100%;
+  max-width: 100px; /* Limita a largura máxima da logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cadastrologo img {
-  display: auto;
-  margin: 0 auto 1rem auto; /* Margem inferior para separação */
-  width: 30%; /* Ajuste o tamanho da logo conforme necessário */
+  width: 100%; 
+  height: auto; 
 }
 
 .formCadastro {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Espaçamento entre os elementos */
-  width: 100%; /* Largura total do formulário */
+  gap: 1.5rem; /* Espaço entre os elementos */
+  width: 100%; 
+  max-width: 400px; /* Limitar a largura máxima do formulário */
 }
 
 .inputGroup {
-  width: 75%;
-  margin-right: auto;
-  margin-left: auto;
+  width: 75%; 
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 .inputGroup label {
-  font-size: 0.9rem; /* Tamanho da fonte do label */
+  font-size: 1rem; 
   color: #333;
-  margin-bottom: 0.5rem; /* Margem abaixo do label */
+  margin-bottom: 0.5rem;
+  font-weight: bold; 
 }
 
 .inputGroup input {
-  padding: 0.75rem; /* Padding dos campos de entrada */
-  border: 1px solid #ddd;
-  border-radius: 8px; /* Bordas arredondadas */
-  font-size: 0.9rem; /* Tamanho da fonte do input */
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem; 
+  color: #333; 
+  background-color: #f9f9f9; 
 }
 
 button {
-  width: 100%;  
-  padding: 0.75rem; /* Padding dos botões */
-  background-color: #04AA6D; /* Cor verde */
-  color: #fff;
-  border: none;
-  border-radius: 8px; /* Bordas arredondadas */
-  font-size: 0.9rem; /* Tamanho da fonte dos botões */
+  width: 100%; 
+  background-color: #91CA8A;
+  max-width: 300px; 
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem; 
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
-.entrarButton{
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #91CA8A; /* Cor verde */
-  border: none;
-  color: #000000;
-  border-radius: 8px; /* Bordas arredondadas */
+button:hover{
+  transform: scale(1.03);
+  opacity: 0.9; 
+}
+
+.entrarButton {
+  width: 100%; 
+  background-color: #91CA8A;
+  max-width: 300px; 
+  margin: 0.5rem auto;
   padding: 0.75rem;
-  font-size: 0.9rem; /* Tamanho da fonte dos botões */
+  border-radius: 8px;
+  font-size: 1rem; 
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
+.entrarButton:hover{
+  transform: scale(1.03);
+  opacity: 0.9; 
+}
 
-button:hover {
-  background-color: #91CA8A; /* Cor verde mais clara ao passar o mouse */
-  transform: scale(1.02);
+.googleButton {
+  width: 500px; 
+  background-color: #5286F1;
+  max-width: 300px; 
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.googleButton:hover{
+  transform: scale(1.03);
+  opacity: 0.9; 
 }
 
 .opcoesCadastro {
@@ -382,53 +424,12 @@ button:hover {
   text-align: center;
 }
 
-.googleButton {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #5286F1; 
-  border: none;
-  color: #000000;
-  border-radius: 8px; /* Bordas arredondadas */
-  padding: 0.75rem;
-  font-size: 0.9rem; /* Tamanho da fonte dos botões */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-
-.googleButton:hover {
-  background-color: #5286F1;
-}
-
-.opcoesCadastro p {
-  margin: 1rem 0 0;
-}
-
-.opcoesCadastro a {
-  color: #04AA6D;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.opcoesCadastro a:hover {
-  text-decoration: underline;
-}
-
-.perfil-cuidador-container {
+.perfil-cuidador-container, .perfil-cliente-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Ocupa a altura total da tela */
-}
-
-.perfil-cliente-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Ocupa a altura total da tela */
+  height: 100vh;
 }
 
 .campos {
@@ -436,7 +437,8 @@ button:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 50%; /* Largura dos campos */
+  width: 100%; /* Largura total */
+  max-width: 600px; /* Limitar a largura máxima */
   margin: 0 auto;
 }
 
@@ -444,33 +446,32 @@ button:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 10px; /* Espaçamento entre os campos */
+  margin-bottom: 10px;
 }
 
 .campo-nome {
   font-weight: bold;
   margin-right: 10px;
-  width: 40%; /* Largura dos nomes dos campos */
+  width: 40%; 
 }
 
 .campo-valor {
-  width: 60%; /* Largura dos valores dos campos */
+  width: 60%;
 }
 
-.voltarhome {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.voltar {
+.voltarhome, .voltar {
   margin-top: 1rem;
   text-align: center;
 }
 
 .voltar button {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px; /* Limitar a largura máxima */
   background-color: #f44336;
-  padding: 0.75rem; /* Padding */
-  font-size: 0.9rem; /* Tamanho da fonte do botão Voltar */
+  padding: 1rem; 
+  font-size: 0.9rem; 
 }
 
 .voltar button:hover {

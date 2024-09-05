@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import React from 'react';
 import './App.css';
 import logo from './images/iconsante.png';
+import santcasa from './images/santcasa.png';
 
 function PageHome() {
     return (
         <div className="loginecadastro">
+            <div className="loginsantcasa">
+                    <img src={santcasa} alt="login-sante" />
+                </div>
             <div className="cadastroContainer">
                 <div className="cadastrologo">
                     <img src={logo} alt="logo-sante" />
@@ -21,7 +25,7 @@ function PageHome() {
                         <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
                     </div>
                     <Link to="/user">
-                        <button className="login">Entrar</button>
+                        <button className="entrar">Entrar</button>
                     </Link>
                 </form>
                 <div className="opcoesCadastro">

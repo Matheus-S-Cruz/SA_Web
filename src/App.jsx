@@ -13,6 +13,7 @@ import ListarCuidadores from './components/ListarCuidadores';
 import ListarClientes from './components/ListarClientes';
 import CronogramaCliente from './components/CronogramaCliente';
 import CronogramaCuidador from './components/CronogramaCuidador';
+import Buscar from './components/Buscar';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="clientes" element={<ListarClientes />} />
           <Route path='cronogramacliente' element={<CronogramaCliente />} />
           <Route path='cronogramacuidador' element={<CronogramaCuidador />} />
+          <Route path='buscar' element={<Buscar />} />
         </Routes>
       </div>
     </>

@@ -365,6 +365,16 @@ html {
   background-color: #f9f9f9; 
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin-right: 10px; /* Espaço pequeno entre o input e o botão */
+}
+
 button {
   width: 100%; 
   background-color: #91CA8A;
@@ -629,4 +639,72 @@ button:hover{
   display: flex; /* Permite o uso de flexbox */
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.buscar-container {
+  display: flex;
+  justify-content: center; /* Centraliza o contêiner */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buscar-input, .buscar-button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  width: 300px; /* Tamanho fixo para ambos */
+  max-width: 100%; /* Para garantir que eles se adaptem a telas menores */
+  box-sizing: border-box; /* Inclui o padding e a borda no cálculo de largura */
+}
+
+.buscar-button {
+  background-color: #5286F1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 80px;
+  margin-right: 400px;
+  width: 200px;
+}
+
+.buscar-button:hover {
+  background-color: #4168c9;
+}
+
+.buscar-input {
+  background-color: #f9f9f9;
+  margin-left: 400px;
+  margin-right: 80px;
+  width: 200px;
+}
+
+.cuidadores-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.cuidadores-table th,
+.cuidadores-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.cuidadores-table th {
+  background-color: #91CA8A;
+  color: white;
+  font-weight: bold;
+}
+
+.cuidadores-table td {
+  background-color: #ffffff;
+}
+
+.cuidadores-table tr:hover {
+  background-color: #f1f1
 }

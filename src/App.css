@@ -477,7 +477,50 @@ button:hover {
   background-color: #e53935;
 }
 
-
-
-
 /*terminando a pagina de cadastro*/
+
+/* Estilo da Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Posiciona fora da tela inicialmente */
+  width: 400px;
+  height: 100%;
+  background-color: #474036;
+  color: #ffffff;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar:hover {
+  left: 0; /* Muda a posição para mostrar a sidebar */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre ícone e texto */
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 20px;
+  width: 100%;
+  transition: background 0.3s ease;
+  height: 50px; /* Garante uma altura consistente para os links */
+}
+
+.sidebar-link:hover {
+  background-color: #616161;
+}
+
+.sidebar-icon img {
+  width: 30px; /* Define a largura dos ícones */
+  height: 30px; /* Define a altura dos ícones */
+}

@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import Sidebar from "./Sidebar";
 import "../App.css";
+import pfp from "../images/pfp.png";
 
 function PerfilCliente() {
   return (
     <div className="perfil-cliente-container">
+      <Sidebar />
       <h1>Cliente</h1>
+      <div className="foto-perfil">
+        <img src={pfp} alt="Foto de Perfil" />
+      </div>
       <div className="campos">
         <div className="campo">
           <span className="campo-nome">Nome</span>

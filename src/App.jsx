@@ -1,4 +1,3 @@
-import React from 'react'
 import Contato from './components/Contato';
 import Home from './components/home';
 import NavBar from './components/NavBar';

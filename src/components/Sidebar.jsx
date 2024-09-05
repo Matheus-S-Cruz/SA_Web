@@ -13,9 +13,8 @@ function Sidebar() {
       <div className="sidebar-content">
         <Link to="/home" className="sidebar-link">
           <div className="sidebar-icon">
-            <img src={logo} alt="logo-sante" />
+            <img src={logo} alt="logo-sante" className="logosante"/>
           </div>
-          <span className="sidebar-text">Logo</span>
         </Link>
         <Link to="/cuidadores" className="sidebar-link">
           <div className="sidebar-icon">

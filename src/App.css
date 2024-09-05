@@ -512,7 +512,7 @@ button:hover{
   text-decoration: none;
   color: #ffffff;
   padding: 15px 20px;
-  width: 100%;
+  width: 90%;
   transition: background 0.3s ease;
   height: 50px; /* Garante uma altura consistente para os links */
 }
@@ -522,6 +522,6 @@ button:hover{
 }
 
 .sidebar-icon img {
-  width: 30px; /* Define a largura dos ícones */
-  height: 30px; /* Define a altura dos ícones */
+  width: 50px; /* Define a largura dos ícones */
+  height: 50px; /* Define a altura dos ícones */
 }

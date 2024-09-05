@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 import SidebarCuidador from "./SidebarCuidador";
 import "../App.css";
 import pfp from "../images/pfp.png";
+import EditCuidadorModal from './EditCuidadorModal';
 
 function PerfilCuidador() {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <div className="perfil-cuidador-container">
       <SidebarCuidador />
@@ -42,10 +49,13 @@ function PerfilCuidador() {
       </div>
 
       <div className="voltarhome">
-        <Link to="/home">
-          <button className="voltar">Voltar</button>
-        </Link>
+        <button className="editar-perfil" onClick={openModal}>
+          Editar Perfil
+        </button>
       </div>
+
+      <EditCuidadorModal isOpen={isModalOpen} onClose={closeModal} />
+
     </div>
   );
 }

@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 import Sidebar from "./Sidebar";
 import "../App.css";
 import pfp from "../images/pfp.png";
+import EditProfileModal from './EditClienteModal';
 
 function PerfilCliente() {
+
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
+
   return (
     <div className="perfil-cliente-container">
       <Sidebar />
@@ -42,10 +49,12 @@ function PerfilCliente() {
       </div>
 
       <div className="voltarhome">
-        <Link to="/home">
-          <button className="voltar">Voltar</button>
-        </Link>
+      <button className="editar-perfil" onClick={openModal}>
+          Editar Perfil
+        </button>
       </div>
+
+      <EditProfileModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

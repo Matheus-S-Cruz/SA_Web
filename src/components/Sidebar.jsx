@@ -3,7 +3,6 @@ import logo from "../images/iconsante.png";
 import cronograma from "../images/cronograma.png";
 import lista from "../images/lista.png";
 import perfil from "../images/perfil.png";
-import perfiledit from "../images/perfiledit.png";
 import sair from "../images/sair.png";
 import "../App.css";
 
@@ -16,6 +15,12 @@ function Sidebar() {
             <img src={logo} alt="logo-sante" className="logosante"/>
           </div>
         </Link>
+        <Link to="/user" className="sidebar-link">
+          <div className="sidebar-icon">
+            <img src={perfil} alt="perfil" />
+          </div>
+          <span className="sidebar-text">Ver Perfil</span>
+        </Link>
         <Link to="/cuidadores" className="sidebar-link">
           <div className="sidebar-icon">
             <img src={lista} alt="lista" />
@@ -27,18 +32,6 @@ function Sidebar() {
             <img src={cronograma} alt="cronograma" />
           </div>
           <span className="sidebar-text">Cronogramas</span>
-        </Link>
-        <Link to="/user" className="sidebar-link">
-          <div className="sidebar-icon">
-            <img src={perfil} alt="perfil" />
-          </div>
-          <span className="sidebar-text">Ver Perfil</span>
-        </Link>
-        <Link to="/useredit" className="sidebar-link">
-          <div className="sidebar-icon">
-            <img src={perfiledit} alt="perfiledit" />
-          </div>
-          <span className="sidebar-text">Editar Perfil</span>
         </Link>
         <Link to="/sair" className="sidebar-link">
           <div className="sidebar-icon">

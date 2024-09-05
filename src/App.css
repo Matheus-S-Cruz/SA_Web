@@ -487,7 +487,7 @@ button:hover{
   left: -250px; /* Posiciona fora da tela inicialmente */
   width: 400px;
   height: 100%;
-  background-color: #474036;
+  background-color: #5286F1;
   color: #ffffff;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -524,4 +524,61 @@ button:hover{
 .sidebar-icon img {
   width: 50px; /* Define a largura dos ícones */
   height: 50px; /* Define a altura dos ícones */
+}
+
+/* Estilo do Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content button[type="button"] {
+  background: #6c757d;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
 }

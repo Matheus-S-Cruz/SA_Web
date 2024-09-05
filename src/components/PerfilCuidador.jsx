@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import Sidebar from "./Sidebar";
+import SidebarCuidador from "./SidebarCuidador";
 import "../App.css";
 import pfp from "../images/pfp.png";
 
 function PerfilCuidador() {
   return (
     <div className="perfil-cuidador-container">
-      <Sidebar />
+      <SidebarCuidador />
       <h1>Cuidador</h1>
       <div className="foto-perfil">
         <img src={pfp} alt="Foto de Perfil" />

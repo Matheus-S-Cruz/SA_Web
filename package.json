@@ -8,11 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node --watch server.js"
+    "start": "node --watch backend/server.js"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
     "dotenv": "^16.4.5",
-    "fastify": "^5.1.0",
+    "fastify": "^4.28.1",
     "postgres": "^3.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -1,10 +1,10 @@
-### Listar clientes
-GET http://localhost:3333/clientes
+### Listar admins
+GET http://localhost:3000/admins
 
 ###
 
-### Criar clientes
-POST http://localhost:3333/clientes
+### Criar admins
+POST http://localhost:3000/admins
 Content-Type: application/json
 
 {
@@ -14,8 +14,40 @@ Content-Type: application/json
 
 ###
 
+### Atualizar admins
+PUT http://localhost:3000/admins/id
+Content-Type: application/json
+
+{
+    "naasdme": "Palhaço Insano",
+    "descricao": "Pré treino mais forte do mercado."
+}
+
+###
+
+### Deletar admins
+DELETE http://localhost:3000/admins/id
+
+
+
+### Listar clientes
+GET http://localhost:3000/clientes
+
+###
+
+### Criar clientes
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+    "name": "Insane Clown",
+    "descricao": "Pra treinar potente!"
+}
+
+### 
+
 ### Atualizar clientes
-PUT http://localhost:3333/clientes/70bd845b-03ed-44ef-ab71-70af255e7258
+PUT http://localhost:3000/clientes/id
 Content-Type: application/json
 
 {
@@ -26,4 +58,36 @@ Content-Type: application/json
 ###
 
 ### Deletar clientes
-DELETE http://localhost:3333/clientes/id
+DELETE http://localhost:3000/clientes/id
+
+
+
+### Listar cuidadores
+GET http://localhost:3000/cuidadores
+
+###
+
+### Criar cuidadores
+POST http://localhost:3000/cuidadores
+Content-Type: application/json
+
+{
+    "name": "Insane Clown",
+    "descricao": "Pra treinar potente!"
+}
+
+###
+
+### Atualizar cuidadores
+PUT http://localhost:3000/cuidadores/
+Content-Type: application/json
+
+{
+    "naasdme": "Palhaço Insano",
+    "descricao": "Pré treino mais forte do mercado."
+}
+
+###
+
+### Deletar cuidadores
+DELETE http://localhost:3000/cuidadores/id

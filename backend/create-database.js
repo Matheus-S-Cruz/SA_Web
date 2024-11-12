@@ -20,11 +20,11 @@ async function createDatabase() {
   }
 }
 
-async function createUser() {
+async function createClientes() {
   try {
     await sql`CREATE USER local WITH PASSWORD '12345';`;
 
-    await sql`GRANT ALL PRIVILEGES ON DATABASE users TO local;`;
+    await sql`GRANT ALL PRIVILEGES ON DATABASE logins TO local;`;
 
     await sql`GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO local;`;
 
@@ -33,12 +33,12 @@ async function createUser() {
     await sql`GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO local;`;
 
     console.log('User created and granted privileges successfully');
-  } catch (error) {
+  }  catch (error) {
     console.error('Error creating user or granting privileges:', error.message);
   } finally {
     await sql.end();
   }
 }
 
-createUser();
+createClientes();
 createDatabase();

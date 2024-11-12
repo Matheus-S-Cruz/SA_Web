@@ -65,7 +65,7 @@ server.put('/clientes/:id', async (request, reply) => {
 
     // Se houver erros, retornar 400 com as mensagens
     if (Object.keys(error).length > 0) {
-        return reply.status(400).send(error);
+        return reply.status(400).send(error);   
     }
 
     // Se todos os dados forem válidos, atualiza o cliente
@@ -91,5 +91,5 @@ server.delete('/clientes/:id', async (request, reply) => {
 })
 
 server.listen({
-    port: 3333
+    port: 3000
 });

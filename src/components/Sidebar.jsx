@@ -11,7 +11,7 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar-content">
         <Link to="/home" className="sidebar-link">
-          <div className="sidebar-icon">
+          <div className="sidebar-logo">
             <img src={logo} alt="logo-sante" className="logosante"/>
           </div>
         </Link>

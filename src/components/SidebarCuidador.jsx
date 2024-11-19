@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../images/iconsante.png";
+import logo from "../images/sante.png";
 import cronograma from "../images/cronograma.png";
 import lista from "../images/lista.png";
 import perfil from "../images/perfil.png";

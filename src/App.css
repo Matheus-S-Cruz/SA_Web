@@ -545,8 +545,9 @@ button:hover{
 }
 
 .sidebar-logo img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
 }
 /* Estilo do Modal */
 .modal-overlay {

@@ -5,7 +5,6 @@ function Buscar() {
         <div>
            <SidebarCuidador />
                 <h1>Clientes perto de você</h1>
-               
                 <div className="buscarb">
 
                 <div className="Nomeb">
@@ -46,6 +45,7 @@ function Buscar() {
                 </div>
             </div>
         </div>
+        
         );
   }
   

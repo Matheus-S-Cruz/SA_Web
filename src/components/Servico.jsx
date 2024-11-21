@@ -12,7 +12,7 @@ function Servicos() {
                     <img src={oferecemos} alt="oferecemos" />
                 </div>
 
-                <p className="oferecemosp">Encontre o lar adotivo ideal em nossa plataforma, com diversas opções e atividades enriquecedoras, incluindo:</p>
+                <p className="oferecemosp"><strong>Encontre o lar adotivo ideal em nossa plataforma, com diversas opções e atividades enriquecedoras, incluindo:</strong></p>
 
                 <div className="fotoservicos">
                     <div className="foto" id="forest">

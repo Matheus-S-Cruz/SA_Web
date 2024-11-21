@@ -17,10 +17,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.lemonada {
-  font-family: 'Lemonada', cursive;
-}
-
 .contato {
   display: flex;
   flex-direction: row;
@@ -47,6 +43,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 0 0 10px 10px;
 }
 
 .nav-links {
@@ -126,7 +123,6 @@ html {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  font-family: 'Lemonada', cursive;
 }
 
 /* .integrantes {
@@ -211,9 +207,7 @@ html {
   font-size: 1.2rem;
   margin: 1rem auto;
   max-width: 800px;
-  text-align: left;
-  text-decoration: underline;
-  margin-right: 47%;
+  text-align: center;
 }
 
 .pservicos-container {

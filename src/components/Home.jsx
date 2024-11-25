@@ -26,7 +26,7 @@ function Home() {
                 </div>
                 <div className="integrante">
                     <h3>Vinicius de Marco</h3>
-                    <p>Desenvolvedor Back e Front-End</p>
+                    <p>Desenvolvedor Front-End</p>
                 </div>
                 <div className="integrante">
                     <h3>Ian Novatzki</h3>

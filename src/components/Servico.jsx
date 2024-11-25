@@ -9,7 +9,7 @@ function Servicos() {
         <div className="servicos" id="servicos">
             <div className='nossosservicos'>
                 <div className="oferecemos">
-                    <img src={oferecemos} alt="oferecemos" />
+                    <h1>O que oferecemos?</h1>
                 </div>
 
                 <p className="oferecemosp"><strong>Encontre o lar adotivo ideal em nossa plataforma, com diversas opções e atividades enriquecedoras, incluindo:</strong></p>
@@ -17,7 +17,6 @@ function Servicos() {
                 <div className="fotoservicos">
                     <div className="foto" id="forest">
                         <div className="forest-container">
-                            <img src={intheforest} alt="forest" />
                             <div className="text-container left">
                                 <p>Trilhas guiadas por profissionais experientes e habilitados.</p>
                             </div>
@@ -26,7 +25,6 @@ function Servicos() {
 
                     <div className="foto" id="piscina">
                         <div className="piscina-container">
-                            <img src={piscina} alt="piscina" />
                             <div className="text-container right">
                                 <p>Sessões de fisioterapia aquática em piscinas aquecidas.</p>
                             </div>
@@ -35,7 +33,6 @@ function Servicos() {
 
                     <div className="foto" id="doctor">
                         <div className="doctor-container">
-                            <img src={doctor} alt="doctor" />
                             <div className="text-container doctor">
                                 <p>Consultas diagnósticas constantes para acompanhar seu bem estar.</p>
                             </div>

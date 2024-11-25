@@ -175,6 +175,8 @@ html {
   border-radius: 10px;
   max-width: 450px;
   font-size: 20px;
+  margin-top: 150px;
+  display: flex;
 }
 
 .text-container.left {
@@ -196,6 +198,7 @@ html {
 
 .nossosservicos {
   background-color: #474036;
+  height: 50rem;
 }
 
 .oferecemos img {
@@ -221,7 +224,6 @@ html {
 .pservicos {
   color: #000000;
   text-align: center;
-  font-family: 'Lemonada', cursive;
 }
 
 .informacoes {
@@ -253,8 +255,7 @@ html {
   justify-content: flex-start;
   align-items: center; 
   overflow: hidden;
-  padding: 2rem 0;
-  z-index: 0; 
+  z-index: 0;
 }
 
 .loginsantcasa{
@@ -299,13 +300,13 @@ html {
 }
 
 .cadastroContainer {
-  margin-bottom: 8rem;
+  margin-bottom: 14rem;
   margin-top: 10rem;
   background: rgba(255, 255, 255, 0.9); 
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 0, 0.1); 
-  padding: 2rem; /* Aumenta o padding ao redor do conteúdo */
-  width: 80%; /* Aumenta a largura do contêiner */
+  
+  width: 60%; /* Aumenta a largura do contêiner */
   max-width: 800px; /* Ajusta a largura máxima se necessário */
   box-sizing: border-box;
   display: flex;

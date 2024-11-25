@@ -1,47 +1,58 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import React from 'react';
 import './App.css';
 import logo from './images/iconsante.png';
 import santcasa from './images/santcasa.png';
 
 function PageHome() {
-    return (
-        <div className="loginecadastro">
-            <div className="loginsantcasa">
-                    <img src={santcasa} alt="login-sante" />
-                </div>
-            <div className="cadastroContainer">
-                <div className="cadastrologo">
-                    <img src={logo} alt="logo-sante" />
-                </div>
-                <form className="formCadastro">
-                    <h2>Faça seu Login</h2>
-                    <div className="inputGroup">
-                        <label htmlFor="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" />
-                    </div>
-                    <div className="inputGroup">
-                        <label htmlFor="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
-                    </div>
-                    <Link to="/user">
-                        <button className="entrar">Entrar</button>
-                    </Link>
-                </form>
-                <div className="opcoesCadastro">
-                    <Link to ="/cuidador">
-                        <button className="googleButton">Entrar com Google</button>
-                    </Link>
-                    <p>Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link></p>
-                </div>
-                <div className="voltar">
-                    <Link to="/">
-                        <button className="voltar">Voltar</button>
-                    </Link>
-                </div>
-            </div>
+  const [selectedCategory, setSelectedCategory] = useState("cliente");
+
+  return (
+    <div className="loginecadastro">
+      <div className="loginsantcasa">
+        <img src={santcasa} alt="login-sante" />
+      </div>
+      <div className="cadastroContainer">
+        <div className="cadastrologo">
+          <img src={logo} alt="logo-sante" />
         </div>
-    );
+        <div className="opcoes">
+          <button
+            className={selectedCategory === "cliente" ? "ativo" : "inativo"}
+            onClick={() => setSelectedCategory("cliente")}
+          >
+            Cliente
+          </button>
+          <button
+            className={selectedCategory === "cuidador" ? "ativo" : "inativo"}
+            onClick={() => setSelectedCategory("cuidador")}
+          >
+            Cuidador
+          </button>
+        </div>
+
+        <div className="materias-content">
+          {selectedCategory === "cliente" && (
+            <div className="flex flex-wrap">
+              <Link to="/login/cliente">
+                <button className="entrar">Entrar como Cliente</button>
+              </Link>
+            </div>
+          )}
+          {selectedCategory === "cuidador" && (
+            <div className="flex flex-wrap">
+              <Link to="/login/cuidador">
+                <button className="entrar">Entrar como Cuidador</button>
+              </Link>
+            </div>
+          )}
+        </div>
+        <Link to="/login/admin">
+                <button className="entrar">Entrar como Admin</button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 export default PageHome;

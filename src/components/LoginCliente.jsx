@@ -4,7 +4,7 @@ import axios from "axios";
 
 function LoginCliente() {
   const [formData, setFormData] = useState({
-    email: "",
+    cpf_cliente: "",
     senha: "",
   });
 
@@ -21,8 +21,8 @@ function LoginCliente() {
 
     try {
       // Substitua pela URL do backend que vai autenticar o cliente
-      await axios.post("http://localhost:3000/login/cliente", {
-        email: formData.email,
+      await axios.post("http://localhost:3000/clientes", {
+        cpf_cliente: formData.cpf_cliente,
         senha: formData.senha,
       });
 
@@ -38,12 +38,12 @@ function LoginCliente() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            <p>E-mail</p>
+            <p>Cpf</p>
             <input
-              name="email"
-              value={formData.email}
+              name="cpf_cliente"
+              value={formData.cpf_cliente}
               onChange={handleInputChange}
-              placeholder="Digite seu e-mail"
+              placeholder="Digite seu cpf"
               required
             />
           </label>

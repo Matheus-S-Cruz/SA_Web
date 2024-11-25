@@ -4,7 +4,7 @@ import axios from "axios";
 
 function LoginAdmin() {
   const [formData, setFormData] = useState({
-    email: "",
+    usuario_admin: "",
     senha: "",
   });
 
@@ -21,8 +21,8 @@ function LoginAdmin() {
 
     try {
       // Substitua pela URL do backend que vai autenticar o cuidador
-      await axios.post("http://localhost:3000/login/cuidador", {
-        email: formData.email,
+      await axios.post("http://localhost:3000/admins", {
+        usuario_admin: formData.usuario_admin,
         senha: formData.senha,
       });
 
@@ -38,12 +38,12 @@ function LoginAdmin() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            <p>E-mail</p>
+            <p>Usuário</p>
             <input
-              name="email"
-              value={formData.email}
+              name="usuario_admin"
+              value={formData.usuario_admin}
               onChange={handleInputChange}
-              placeholder="Digite seu e-mail"
+              placeholder="Digite seu usuário"
               required
             />
           </label>

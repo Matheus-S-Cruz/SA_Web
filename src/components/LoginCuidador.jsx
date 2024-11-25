@@ -4,7 +4,7 @@ import axios from "axios";
 
 function LoginCuidador() {
   const [formData, setFormData] = useState({
-    email: "",
+    cpf_cuidador: "",
     senha: "",
   });
 
@@ -21,8 +21,8 @@ function LoginCuidador() {
 
     try {
       // Substitua pela URL do backend que vai autenticar o cuidador
-      await axios.post("http://localhost:3000/login/cuidador", {
-        email: formData.email,
+      await axios.post("http://localhost:3000/cuidadores", {
+        cpf_cuidador: formData.cpf_cuidador,
         senha: formData.senha,
       });
 
@@ -38,12 +38,12 @@ function LoginCuidador() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            <p>E-mail</p>
+            <p>Cpf</p>
             <input
-              name="email"
-              value={formData.email}
+              name="cpf_cuidador"
+              value={formData.cpf_cuidador}
               onChange={handleInputChange}
-              placeholder="Digite seu e-mail"
+              placeholder="Digite seu cpf"
               required
             />
           </label>

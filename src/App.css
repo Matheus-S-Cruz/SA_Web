@@ -26,6 +26,10 @@ html {
   margin-bottom: 30px;
 }
 
+.lemonada {
+  font-size: 24px;
+}
+
 .h2contato {
   font-size: 48px;
   font-weight: bold;
@@ -160,13 +164,6 @@ html {
   width: 100%;
 }
 
-.forest-container img,
-.piscina-container img,
-.doctor-container img {
-  width: 100%;
-  display: block;
-}
-
 .text-container {
   position: absolute;
   padding: 15px;
@@ -197,13 +194,22 @@ html {
 }
 
 .nossosservicos {
-  background-color: #474036;
-  height: 50rem;
+  background-color: #689662;
+  height: 30rem;
+  border-radius: 50px;
 }
 
-.oferecemos img {
-  width: 100%;
-  height: auto;
+.oferecemos{
+  font-size: 32px;
+}
+
+.objetivos {
+  font-size: 24px;
+  margin: 40px 40px 40px 40px;
+}
+
+.objetivo {
+  font-size: 20px;
 }
 
 .oferecemosp {
@@ -213,14 +219,6 @@ html {
   text-align: center;
 }
 
-.pservicos-container {
-  background: linear-gradient(to bottom, #95C88E, #689662); 
-  margin: 0 auto; /* Centraliza o contêiner */
-  max-width: 1200px;
-  padding: 1rem; /* Adiciona um espaçamento interno */
-  border-radius: 10px;
-}
-
 .pservicos {
   color: #000000;
   text-align: center;
@@ -228,7 +226,6 @@ html {
 
 .informacoes {
   border-radius: 20px;
-  background-color: #bbfae3;
   margin-left: 20px;
   margin-right: 20px;
 }

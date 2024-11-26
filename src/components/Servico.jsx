@@ -12,39 +12,21 @@ function Servicos() {
                     <h1>O que oferecemos?</h1>
                 </div>
 
-                <p className="oferecemosp"><strong>Encontre o lar adotivo ideal em nossa plataforma, com diversas opções e atividades enriquecedoras, incluindo:</strong></p>
-
-                <div className="fotoservicos">
-                    <div className="foto" id="forest">
-                        <div className="forest-container">
-                            <div className="text-container left">
-                                <p>Trilhas guiadas por profissionais experientes e habilitados.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="foto" id="piscina">
-                        <div className="piscina-container">
-                            <div className="text-container right">
-                                <p>Sessões de fisioterapia aquática em piscinas aquecidas.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="foto" id="doctor">
-                        <div className="doctor-container">
-                            <div className="text-container doctor">
-                                <p>Consultas diagnósticas constantes para acompanhar seu bem estar.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div className="objetivos">
+                    <p>A equipe Santé é composta por profissionais dedicados e apaixonados que têm um objetivo claro: tornar a busca por uma casa geriátrica uma tarefa mais 
+                    simples e eficiente. Compreendemos que encontrar o lugar ideal para um ente querido é uma decisão delicada, que envolve não apenas questões logísticas,
+                     mas também emocionais.
+                    Nosso projeto visa oferecer uma plataforma intuitiva e acessível, onde os clientes podem explorar diversas opções de casas geriátricas.
+                    Através de uma pesquisa cuidadosa e criteriosa, buscamos resultados que atendam às necessidades específicas de cada cliente, priorizando o conforto
+                     e o bem-estar dos idosos.</p>
                 </div>
+
+                <div className="objetivo">
+                <p>
+                    <strong>Nosso objetivo é garantir que você encontre um ambiente acolhedor que atenda às suas necessidades e preferências.</strong>
+                </p>
             </div>
 
-            <div className="pservicos-container">
-                <p className='pservicos'>
-                    Nosso objetivo é garantir que você encontre um ambiente acolhedor que atenda às suas necessidades e preferências.
-                </p>
             </div>
     </div>
     );

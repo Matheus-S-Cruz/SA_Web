@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Corrigido: importando useNavigate
 import axios from "axios";
 
-function LoginCliente() {
+const LoginCliente = () => {
   const [formData, setFormData] = useState({
     cpf_cliente: "",
     senha: "",
   });
+  
+  const navigate = useNavigate(); // Hook para navegação programática
 
+  // Função para atualizar os campos do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -20,13 +23,18 @@ function LoginCliente() {
     e.preventDefault();
 
     try {
-      // Substitua pela URL do backend que vai autenticar o cliente
-      await axios.post("http://localhost:3000/clientes", {
+      const response = await axios.post("http://localhost:3000/clientes", {
         cpf_cliente: formData.cpf_cliente,
         senha: formData.senha,
       });
 
+      const token = response.data.token;
+      localStorage.setItem("authToken", token);
+
       alert("Login realizado com sucesso!");
+
+      // Redireciona para a página inicial ou qualquer outra página após o login
+      navigate("/user");
     } catch (error) {
       console.error("Erro ao realizar o login:", error);
       alert("Erro ao realizar o login.");
@@ -60,7 +68,9 @@ function LoginCliente() {
             />
           </label>
         </div>
-        <button type="submit">Entrar</button>
+        <Link to="../user">
+        <button className="entrar">Entrar</button>
+      </Link>          
       </form>
       <p>
         Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link>
@@ -70,6 +80,6 @@ function LoginCliente() {
       </Link>
     </div>
   );
-}
+};
 
 export default LoginCliente;

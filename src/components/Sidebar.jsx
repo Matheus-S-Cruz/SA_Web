@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../images/iconsante.png";
-import cronograma from "../images/cronograma.png";
 import lista from "../images/lista.png";
 import perfil from "../images/perfil.png";
 import sair from "../images/sair.png";
@@ -26,12 +25,6 @@ function Sidebar() {
             <img src={lista} alt="lista" />
           </div>
           <span className="sidebar-text">Lista de Cuidadores</span>
-        </Link>
-        <Link to="/cronogramacliente" className="sidebar-link">
-          <div className="sidebar-icon">
-            <img src={cronograma} alt="cronograma" />
-          </div>
-          <span className="sidebar-text">Cronogramas</span>
         </Link>
         <Link to="/home" className="sidebar-link">
           <div className="sidebar-icon">

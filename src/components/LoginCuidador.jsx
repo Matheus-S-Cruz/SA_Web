@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Corrigido: importando useNavigate
 import axios from "axios";
 
-function LoginCuidador() {
+const LoginCuidador = () => {
   const [formData, setFormData] = useState({
     cpf_cuidador: "",
     senha: "",
   });
 
+  const navigate = useNavigate(); // Hook para navegação programática
+
+  // Função para atualizar os campos do formulário
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -20,13 +23,18 @@ function LoginCuidador() {
     e.preventDefault();
 
     try {
-      // Substitua pela URL do backend que vai autenticar o cuidador
-      await axios.post("http://localhost:3000/cuidadores", {
+      const response = await axios.post("http://localhost:3000/cuidadores", {
         cpf_cuidador: formData.cpf_cuidador,
         senha: formData.senha,
       });
 
+      const token = response.data.token;
+      localStorage.setItem("authToken", token);
+
       alert("Login realizado com sucesso!");
+
+      // Redireciona para a página do cuidador ou qualquer outra página após o login
+      navigate("/cuidador"); // Ajuste para a página correta do cuidador
     } catch (error) {
       console.error("Erro ao realizar o login:", error);
       alert("Erro ao realizar o login.");
@@ -60,7 +68,9 @@ function LoginCuidador() {
             />
           </label>
         </div>
-        <button type="submit">Entrar</button>
+        <Link to="../cuidador">
+        <button className="entrar">Entrar</button>
+      </Link>          
       </form>
       <p>
         Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link>
@@ -70,6 +80,6 @@ function LoginCuidador() {
       </Link>
     </div>
   );
-}
+};
 
 export default LoginCuidador;

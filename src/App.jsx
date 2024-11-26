@@ -11,9 +11,6 @@ import PerfilCliente from './components/PerfilCliente'
 import Cadastro from './components/Cadastro'
 import ListarCuidadores from './components/ListarCuidadores';
 import ListarClientes from './components/ListarClientes';
-import CronogramaCliente from './components/CronogramaCliente';
-import CronogramaCuidador from './components/CronogramaCuidador';
-import Buscar from './components/Buscar';
 import LoginCliente from './components/LoginCliente';
 import LoginCuidador from './components/LoginCuidador';
 import LoginAdmin from './components/LoginAdmin';
@@ -40,9 +37,6 @@ function App() {
         <Route path="cadastro" element={<Cadastro />} />
         <Route path="cuidadores" element={<ListarCuidadores />} />
         <Route path="clientes" element={<ListarClientes />} />
-        <Route path='cronogramacliente' element={<CronogramaCliente />} />
-        <Route path='cronogramacuidador' element={<CronogramaCuidador />} />
-        <Route path='buscar' element={<Buscar />} />
         <Route path="login/cliente" element={<LoginCliente />} />
         <Route path="login/cuidador" element={<LoginCuidador />} />
         <Route path='login/admin' element={<LoginAdmin />} />

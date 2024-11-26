@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';  // Importa o axios para fazer requisições HTTP
-import SidebarCuidador from './SideBarCuidador';
+import SidebarAdmin from './SideBarAdmin';
 
 function AdminClientes() {
   // Estado para armazenar os clientes
@@ -25,7 +25,7 @@ function AdminClientes() {
 
   return (
     <div className='cuidadores'>
-      <SidebarCuidador />
+        <SidebarAdmin />
       <h1>Gerenciamento de Clientes</h1>
       <div className="buscar-container">
         <input type="text" placeholder="Buscar Cliente" className="buscar-input" />
@@ -36,6 +36,7 @@ function AdminClientes() {
           <tr>
             <th>CPF</th>
             <th>Nome Completo</th>
+            <th>Email</th>
             <th>Descrição</th>
             <th>Endereço</th>
           </tr>
@@ -46,13 +47,14 @@ function AdminClientes() {
               <tr key={cliente.id_cliente}>
                 <td>{cliente.cpf_cliente}</td> {/* Exibe o CPF do cliente */}
                 <td>{cliente.name}</td> {/* Exibe o nome do cliente */}
+                <td>{cliente.email}</td> {/* Exibe o email do cliente */}
                 <td>{cliente.descricao}</td> {/* Exibe a descrição do cliente */}
                 <td>{cliente.endereco}</td> {/* Exibe o endereço do cliente */}
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="4">Nenhum cliente encontrado.</td>
+              <td colSpan="5">Nenhum cliente encontrado.</td>
             </tr>
           )}
         </tbody>

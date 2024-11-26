@@ -9,10 +9,9 @@ function Home() {
       </div>
       <div className="sante" id="sante">
             <div className="sobre">
-                <h1>Quem somos nós?</h1>
+                <h1>Desenvolvedores</h1>
                 <div className="lemonada">
-                <p>A Santé é uma ideia realizada por quatro alunos da Escola Sesi, onde tiveram a mesma ideia de criar um site simples e rápido e que pudesse ajudar  outras pessoas. O projeto Santé tem por objetivo tornar a busca por uma casa geriátrica uma tarefa mais fácil, buscando por resultados que busquem conforto conforme o cliente desejar.</p>
-                <p>Santé se refere a saúde em francês, sendo um termo utilizado em clínicas médicas, espero que consigamos atender o seu conforto.</p>
+                <p>Santé se refere a <strong>saúde</strong> em francês, sendo um termo utilizado em clínicas médicas, espero que consigamos atender o seu conforto.</p>
                 </div>
             </div>
             <div className="integrantes">

@@ -62,7 +62,12 @@ function LoginCuidador() {
         </div>
         <button type="submit">Entrar</button>
       </form>
-      <p>Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link></p>
+      <p>
+        Não tem uma conta? <Link to="/cadastro">Crie uma conta</Link>
+      </p>
+      <Link to="../home">
+        <button className="entrar">Voltar</button>
+      </Link>
     </div>
   );
 }

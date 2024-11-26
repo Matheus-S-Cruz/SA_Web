@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // useNavigate para redirecionamento
 import axios from "axios";
 
 function LoginAdmin() {
@@ -7,7 +7,10 @@ function LoginAdmin() {
     usuario_admin: "",
     senha: "",
   });
+  const [error, setError] = useState(null); // Para exibir erros
+  const navigate = useNavigate(); // Inicialize o hook useNavigate
 
+  // Função para capturar as mudanças nos inputs
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -16,20 +19,34 @@ function LoginAdmin() {
     }));
   };
 
+  // Função que é chamada no envio do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Substitua pela URL do backend que vai autenticar o cuidador
-      await axios.post("http://localhost:3000/admins", {
+      const response = await axios.post("http://localhost:3000/login-admin", {
         usuario_admin: formData.usuario_admin,
         senha: formData.senha,
       });
 
-      alert("Login realizado com sucesso!");
+      if (response.data.success) { // Se login for bem sucedido
+        alert(response.data.message); // Exibe a mensagem de sucesso
+        navigate("/admin"); // Redireciona para a página de Admin
+      } else {
+        setError("Login falhou: " + response.data.message); // Exibe a mensagem de erro
+      }
+
     } catch (error) {
-      console.error("Erro ao realizar o login:", error);
-      alert("Erro ao realizar o login.");
+      // Depuração de erros
+      console.error("Erro ao realizar o login:", error.response || error.message || error);
+
+      if (error.response) {
+        setError(`Erro de servidor: ${error.response.status} - ${error.response.statusText}`);
+      } else if (error.request) {
+        setError("Erro: Sem resposta do servidor.");
+      } else {
+        setError("Erro ao realizar o login. Tente novamente.");
+      }
     }
   };
 
@@ -60,8 +77,18 @@ function LoginAdmin() {
             />
           </label>
         </div>
-        <button type="submit">Entrar</button>
+        <Link to="../adminPage">
+        <button className="entrar">Entrar</button>
+      </Link>      
       </form>
+
+      {/* Exibe o erro, caso haja */}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      {/* Link para voltar à página inicial */}
+      <Link to="../home">
+        <button className="entrar">Voltar</button>
+      </Link>
     </div>
   );
 }

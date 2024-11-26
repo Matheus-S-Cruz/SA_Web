@@ -17,6 +17,9 @@ import Buscar from './components/Buscar';
 import LoginCliente from './components/LoginCliente';
 import LoginCuidador from './components/LoginCuidador';
 import LoginAdmin from './components/LoginAdmin';
+import Admin from './components/Admin';
+import AdminClientes from './components/AdminClientes';
+import AdminCuidadores from './components/AdminCuidadores';
 
 function App() {
   return (
@@ -43,6 +46,9 @@ function App() {
         <Route path="login/cliente" element={<LoginCliente />} />
         <Route path="login/cuidador" element={<LoginCuidador />} />
         <Route path='login/admin' element={<LoginAdmin />} />
+        <Route path='adminPage' element={<Admin />} />
+        <Route path='admin/clientes' element={<AdminClientes />} />
+        <Route path='admin/cuidadores' element={<AdminCuidadores />} />
       </Routes>
     </div>
   );

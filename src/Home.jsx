@@ -18,7 +18,7 @@ function PageHome() {
         </div>
         <div className="opcoes">
           <button
-            className={selectedCategory === "cliente" ? "ativo" : "inativo"}
+            className={`opcao ${selectedCategory === "cliente" ? "ativo" : "inativo"}`}
             onClick={() => setSelectedCategory("cliente")}
           >
             Cliente

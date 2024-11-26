@@ -79,8 +79,22 @@ function PerfilCuidador() {
         </button>
       </div>
 
-      <EditProfileModal isOpen={isModalOpen} onClose={closeModal} />
-    </div>
+      <EditProfileModal 
+  isOpen={isModalOpen} 
+  onClose={closeModal} 
+  cuidador={cuidador} 
+  onSave={async (updatedData) => {
+    try {
+      await axios.put(`http://localhost:3000/cuidadores/${cuidador.id}`, updatedData);
+      setCuidador(updatedData); // Atualiza o estado com os novos dados
+      alert("Perfil atualizado com sucesso!");
+    } catch (error) {
+      console.error("Erro ao atualizar o perfil:", error);
+      alert("Erro ao salvar as alterações.");
+    }
+  }} 
+/>
+  </div>
   );
 }
 

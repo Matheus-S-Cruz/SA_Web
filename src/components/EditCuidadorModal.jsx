@@ -1,30 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 
-function EditCuidadorModal({ isOpen, onClose }) {
+function EditCuidadorModal({ isOpen, onClose, cuidador, onSave }) {
   const [formData, setFormData] = useState({
-    nome: '',
+    name: '',
+    cpf_cuidador: '',
     email: '',
-    bio: '',
-    restricoes: '',
-    contatoEmergencia: '',
-    foto: null,
+    descricao: '',
+    endereco: '',
+    complemento: '',
   });
+
+  // Atualiza o estado do formulário com os dados do cuidador quando o modal é aberto
+  useEffect(() => {
+    if (cuidador) {
+      setFormData({
+        name: cuidador.name || '',
+        cpf_cuidador: cuidador.cpf_cuidador || '',
+        email: cuidador.email || '',
+        descricao: cuidador.descricao || '',
+        endereco: cuidador.endereco || '',
+        complemento: cuidador.complemento || '',
+      });
+    }
+  }, [cuidador]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, foto: e.target.files[0] });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lógica para enviar os dados do formulário
-    console.log('Dados do formulário:', formData);
-    onClose(); // Fechar o modal após o envio
+    // Chama a função de salvamento (pode ser para o backend ou para o componente pai)
+    onSave(formData);
+    onClose(); // Fecha o modal após salvar
   };
 
   if (!isOpen) return null;
@@ -35,12 +45,23 @@ function EditCuidadorModal({ isOpen, onClose }) {
         <h2>Editar Perfil</h2>
         <form onSubmit={handleSubmit}>
           <label>
-            Nome:
+            Nome Completo:
             <input
               type="text"
-              name="nome"
-              value={formData.nome}
+              name="name"
+              value={formData.name}
               onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            CPF:
+            <input
+              type="text"
+              name="cpf_cuidador"
+              value={formData.cpf_cuidador}
+              onChange={handleInputChange}
+              required
             />
           </label>
           <label>
@@ -50,39 +71,34 @@ function EditCuidadorModal({ isOpen, onClose }) {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
+              required
             />
           </label>
           <label>
-            Bio:
+            Descrição:
             <textarea
-              name="bio"
-              value={formData.bio}
+              name="descricao"
+              value={formData.descricao}
               onChange={handleInputChange}
             />
           </label>
           <label>
-            Restrições:
-            <textarea
-              name="restricoes"
-              value={formData.restricoes}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Contato de Emergência:
+            Endereço:
             <input
               type="text"
-              name="contatoEmergencia"
-              value={formData.contatoEmergencia}
+              name="endereco"
+              value={formData.endereco}
               onChange={handleInputChange}
+              required
             />
           </label>
           <label>
-            Foto de Perfil:
+            Complemento:
             <input
-              type="file"
-              name="foto"
-              onChange={handleFileChange}
+              type="text"
+              name="complemento"
+              value={formData.complemento}
+              onChange={handleInputChange}
             />
           </label>
           <button type="submit">Salvar</button>

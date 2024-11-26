@@ -1,30 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
+import axios from 'axios';
 
-function EditClienteModal({ isOpen, onClose }) {
+function EditClienteModal({ isOpen, onClose, cliente, onUpdateCliente }) {
   const [formData, setFormData] = useState({
-    nome: '',
+    name: '',
+    cpf_cliente: '',
     email: '',
-    bio: '',
-    restricoes: '',
-    contatoEmergencia: '',
-    foto: null,
+    descricao: '',
+    endereco: '',
+    complemento: '',
   });
+
+  // Atualiza os campos com os dados do cliente ao abrir o modal
+  useEffect(() => {
+    if (cliente) {
+      setFormData({
+        name: cliente.name || '',
+        cpf_cliente: cliente.cpf_cliente || '',
+        email: cliente.email || '',
+        descricao: cliente.descricao || '',
+        endereco: cliente.endereco || '',
+        complemento: cliente.complemento || '',
+      });
+    }
+  }, [cliente]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, foto: e.target.files[0] });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica para enviar os dados do formulário
-    console.log('Dados do formulário:', formData);
-    onClose(); // Fechar o modal após o envio
+
+    try {
+      // Atualiza os dados no backend
+      const response = await axios.put(
+        `http://localhost:3000/clientes/${cliente.id}`,
+        formData
+      );
+
+      // Notifica o componente pai sobre a atualização do cliente
+      onUpdateCliente(response.data);
+
+      alert('Perfil atualizado com sucesso!');
+      onClose();
+    } catch (error) {
+      console.error('Erro ao atualizar perfil:', error);
+      alert('Erro ao atualizar o perfil.');
+    }
   };
 
   if (!isOpen) return null;
@@ -38,9 +66,20 @@ function EditClienteModal({ isOpen, onClose }) {
             Nome:
             <input
               type="text"
-              name="nome"
-              value={formData.nome}
+              name="name"
+              value={formData.name}
               onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            CPF:
+            <input
+              type="text"
+              name="cpf_cliente"
+              value={formData.cpf_cliente}
+              onChange={handleInputChange}
+              required
             />
           </label>
           <label>
@@ -50,39 +89,35 @@ function EditClienteModal({ isOpen, onClose }) {
               name="email"
               value={formData.email}
               onChange={handleInputChange}
+              required
             />
           </label>
           <label>
-            Bio:
-            <textarea
-              name="bio"
-              value={formData.bio}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Restrições:
-            <textarea
-              name="restricoes"
-              value={formData.restricoes}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Contato de Emergência:
+            Descrição:
             <input
               type="text"
-              name="contatoEmergencia"
-              value={formData.contatoEmergencia}
+              name="descricao"
+              value={formData.descricao}
               onChange={handleInputChange}
             />
           </label>
           <label>
-            Foto de Perfil:
+            Endereço:
             <input
-              type="file"
-              name="foto"
-              onChange={handleFileChange}
+              type="text"
+              name="endereco"
+              value={formData.endereco}
+              onChange={handleInputChange}
+              required
+            />
+          </label>
+          <label>
+            Complemento:
+            <input
+              type="text"
+              name="complemento"
+              value={formData.complemento}
+              onChange={handleInputChange}
             />
           </label>
           <button type="submit">Salvar</button>

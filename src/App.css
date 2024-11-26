@@ -3,6 +3,9 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #F0F8EF;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
 body, html {
@@ -224,6 +227,481 @@ html {
   text-align: center;
 }
 
+
+.cpf {
+  font-size: 20px;
+  font-family:'Gill Sans';
+}
+
+.senha {
+  font-size: 20px;
+  font-family:'Gill Sans';
+}
+
+.cpf_cliente {
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.senha_cliente{
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.informacoes {
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer {
+  top: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #474036;
+  height: auto;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+
+/* Página de Cadastro */
+.loginecadastro {
+  position: relative; 
+  min-height: 100vh; 
+  background-color: #ffffff; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
+  overflow: hidden;
+  z-index: 0;
+}
+
+.loginsantcasa{
+  position: absolute; 
+  top: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 2; 
+}
+
+.loginsantcasa img {
+  width: 100%; 
+  margin-top: 1rem;
+}
+
+.loginecadastro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  background: linear-gradient(to bottom right, #ffffff, #a6dd9f); 
+  z-index: -1; 
+}
+
+.loginecadastro::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%; 
+  height: 75%; 
+  margin-bottom: 2rem;
+  background-image: url('../src/images/loginvelhos.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%); 
+  z-index: 0; 
+  border-radius: 20px; 
+}
+
+.cadastroContainer {
+  margin-bottom: 14rem;
+  margin-top: 10rem;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 0 8px rgba(0, 0, 0, 0.1); 
+  
+  width: 60%; /* Aumenta a largura do contêiner */
+  max-width: 800px; /* Ajusta a largura máxima se necessário */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease; 
+}
+
+.cadastroContainer:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1); 
+  transform: scale(1.02); 
+}
+
+.cadastrologo {
+  margin-top: 3rem; /* Posiciona logo mais para cima */
+  width: 100%;
+  max-width: 100px; /* Limita a largura máxima da logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastrologo img {
+  width: 100%; 
+  height: auto; 
+}
+
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espaço entre os elementos */
+  width: 100%; 
+  max-width: 400px; /* Limitar a largura máxima do formulário */
+}
+
+.inputGroup {
+  width: 75%; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 1rem; 
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold; 
+}
+
+.inputGroup input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem; 
+  color: #333; 
+  background-color: #f9f9f9; 
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Para garantir que ocupe toda a altura da tela */
+}
+
+.box {
+  width: 300px; /* Largura do box */
+  height: 200px; /* Altura do box */
+  background-color: lightblue; /* Cor do box para exemplo */
+}
+
+.container {
+  display: grid;
+  place-items: center; /* Centraliza tanto horizontal quanto verticalmente */
+  height: 100vh; /* Para garantir que ocupe toda a altura da tela */
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: lightgreen;
+}
+
+.container {
+  width: 100%;
+}
+
+.box {
+  width: 300px; /* Largura do box */
+  height: 200px; /* Altura do box */
+  background-color: lightcoral;
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.container {
+  position: relative;
+  height: 100vh; /* Para garantir que ocupe toda a altura da tela */
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ajuste para centralizar */
+  width: 300px;
+  height: 200px;
+  background-color: lightyellow;
+}
+
+body {
+  color: #000000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #F0F8EF;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contato {
+  display: flex;
+  flex-direction: row;
+  display: inline-block;
+  margin-left: 30%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.lemonada {
+  font-size: 24px;
+}
+
+.h2contato {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.logo {
+  height: 40px;
+}
+
+.topnav {
+  width: 100%;
+  height: 65px;
+  overflow: hidden;
+  background-color: #249b75;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.buscarb{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.logo img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 23px;
+  height: 75px;
+  line-height: 75px;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.home {
+  align-items: center;
+  background-color: #91CA8A;
+  color: #000000;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 20%; 
+  text-decoration: none;
+  height: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  
+}
+.pagina {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow: hidden;
+  background-image: url('../images/velhos.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; 
+}
+
+.integrantes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.integrante {
+  flex: 1 0 20%;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* .integrantes {
+  img {
+    width: 497px;
+    height: 392px;
+    object-fit: cover;
+     Garante que a imagem não distorça e cobre a área especificada 
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+} */
+
+.servicos {
+  padding: 2rem 0;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+}
+
+.servicos .fotoservicos {
+  display: flex;
+  flex-direction: column;
+}
+
+.foto {
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.text-container {
+  position: absolute;
+  padding: 15px;
+  background-color: rgba(0, 128, 0, 0.6); /* Fundo verde com transparência */
+  color: white;
+  border-radius: 10px;
+  max-width: 450px;
+  font-size: 20px;
+  margin-top: 150px;
+  display: flex;
+}
+
+.text-container.left {
+  left: 5%;
+  bottom: 10%;
+}
+
+.text-container.right {
+  right: 5%;
+  bottom: 10%;
+  background-color: rgba(0, 122, 128, 0.6); /* Fundo verde com transparência */
+}
+
+.text-container.doctor {
+  left: 5%;
+  bottom: 10%;
+  background-color: rgba(201, 1, 1, 0.6); /* Fundo verde com transparência */
+}
+
+.nossosservicos {
+  background-color: #689662;
+  height: 30rem;
+  border-radius: 50px;
+}
+
+.oferecemos{
+  font-size: 32px;
+}
+
+.objetivos {
+  font-size: 24px;
+  margin: 40px 40px 40px 40px;
+}
+
+.objetivo {
+  font-size: 20px;
+}
+
+.oferecemosp {
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.pservicos {
+  color: #000000;
+  text-align: center;
+}
+
+
+.cpf {
+  font-size: 20px;
+  font-family:'Gill Sans';
+}
+
+.senha {
+  font-size: 20px;
+  font-family:'Gill Sans';
+}
+
+.cpf_cliente {
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.senha_cliente{
+  border-radius: 20px;
+  box-shadow: none;
+}
+
 .informacoes {
   border-radius: 20px;
   margin-left: 20px;
@@ -392,6 +870,431 @@ button:hover{
   transform: scale(1.03);
   opacity: 0.9; 
 }
+
+
+.entrarButton {
+  width: 100%; 
+  background-color: #91CA8A;
+  max-width: 300px; 
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.entrarButton:hover{
+  transform: scale(1.03);
+  opacity: 0.9; 
+}
+
+.googleButton {
+  width: 500px; 
+  background-color: #5286F1;
+  max-width: 300px; 
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem; 
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.googleButton:hover{
+  transform: scale(1.03);
+  opacity: 0.9; 
+}
+
+.opcoesCadastro {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.perfil-cuidador-container, .perfil-cliente-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%; /* Largura total */
+  max-width: 600px; /* Limitar a largura máxima */
+  margin: 0 auto;
+}
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.campo-nome {
+  font-weight: bold;
+  margin-right: 10px;
+  width: 40%; 
+}
+
+.campo-valor {
+  width: 60%;
+}
+
+.voltarhome, .voltar {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.voltar button {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px; /* Limitar a largura máxima */
+  background-color: #f44336;
+  padding: 1rem; 
+  font-size: 0.9rem; 
+}
+
+.voltar button:hover {
+  background-color: #e53935;
+}
+
+/*terminando a pagina de cadastro*/
+
+/* Estilo da Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -350px; /* Posiciona fora da tela inicialmente */
+  width: 400px;
+  height: 100%;
+  background-color: #32725e;
+  color: #ffffff;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar:hover {
+  left: 0; /* Muda a posição para mostrar a sidebar */
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre ícone e texto */
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 20px;
+  width: 90%;
+  transition: background 0.3s ease;
+  height: 50px; /* Garante uma altura consistente para os links */
+}
+
+.sidebar-link:hover {
+  background-color: #8a8787;
+}
+
+.sidebar-icon img {
+  width: 50px; /* Define a largura dos ícones */
+  height: 50px; /* Define a altura dos ícones */
+}
+
+.sidebar-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+}
+/* Estilo do Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.modal-content button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-content button[type="button"] {
+  background: #6c757d;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo para o contêiner dos botões */
+.opcoes {
+  display: flex;
+  justify-content: space-between; /* Garante que o espaçamento entre os botões seja igual */
+  gap: 1rem; /* Espaçamento opcional entre os botões, pode ajustar conforme necessário */
+  margin-top: 1rem;
+}
+
+/* Estilo para os botões de seleção */
+.opcoes button {
+  width: 100%;
+  max-width: 300px;
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff; /* Cor de fundo padrão (inativo) */
+  color: #000000; /* Cor do texto padrão */
+  border: 2px solid #dcdcdc; /* Borda padrão */
+}
+
+.opcoes button.ativo {
+  background-color: #4CAF50; /* Cor de fundo quando ativo (verde) */
+  color: #ffffff; /* Cor do texto quando ativo */
+  border: 2px solid #4CAF50; /* Borda verde quando ativo */
+}
+
+.opcoes button.inativo {
+  background-color: #ffffff; /* Cor de fundo quando inativo */
+  color: #000000; /* Cor do texto quando inativo */
+  border: 2px solid #dcdcdc; /* Borda padrão */
+}
+
+#project {
+  background-image: url('./images/intheforest.png');
+  background-size: cover; /* Faz a imagem cobrir toda a área */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede a repetição da imagem */
+  background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
+  height: 100vh; /* Define a altura da seção */
+  display: flex; /* Permite o uso de flexbox */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.buscar-container {
+  display: flex;
+  justify-content: center; /* Centraliza o contêiner */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buscar-input, .buscar-button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  width: 300px; /* Tamanho fixo para ambos */
+  max-width: 100%; /* Para garantir que eles se adaptem a telas menores */
+  box-sizing: border-box; /* Inclui o padding e a borda no cálculo de largura */
+}
+
+.buscar-button {
+  background-color: #5286F1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 80px;
+  margin-right: 400px;
+  width: 200px;
+}
+
+.buscar-button:hover {
+  background-color: #4168c9;
+}
+
+.buscar-input {
+  background-color: #f9f9f9;
+  margin-left: 400px;
+  margin-right: 80px;
+  width: 200px;
+}
+
+.cuidadores-table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.cuidadores-table th,
+.cuidadores-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.cuidadores-table th {
+  background-color: #91CA8A;
+  color: white;
+  font-weight: bold;
+}
+
+.cuidadores-table td {
+  background-color: #ffffff;
+}
+
+.cuidadores-table tr:hover {
+  background-color: #f1f1
+}
+
+.cronograma {
+  display: flex;
+}
+
+.conteudo {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.dias-da-semana {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dia {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.dia.selecionado {
+  background-color: #91CA8A;
+  color: white;
+}
+
+.cronograma-detalhes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.atividades, .cuidadores {
+  width: 48%;
+}
+
+.atividades ul, .cuidadores ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.atividades li, .cuidadores li {
+  margin-bottom: 10px;
+}
+
+body {
+  color: #000000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #F0F8EF;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.logincard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Preenche toda a altura da tela */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espaço entre os campos do formulário */
+  width: 100%;
+  max-width: 400px; /* Limita a largura máxima do formulário */
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #249b75;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover{
+  transform: scale(1.03);
+  opacity: 0.9;
+  background-color: #1e7d59;
+}
+
 
 .entrarButton {
   width: 100%; 

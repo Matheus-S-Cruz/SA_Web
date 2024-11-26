@@ -46,8 +46,8 @@ const LoginCliente = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            <p>Cpf</p>
-            <input
+            <p className="cpf">Cpf</p>
+            <input className="cpf_cliente"
               name="cpf_cliente"
               value={formData.cpf_cliente}
               onChange={handleInputChange}
@@ -57,8 +57,8 @@ const LoginCliente = () => {
           </label>
 
           <label>
-            <p>Senha</p>
-            <input
+            <p className="senha">Senha</p>
+            <input className="senha_cliente"
               name="senha"
               type="password"
               value={formData.senha}

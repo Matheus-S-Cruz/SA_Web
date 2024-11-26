@@ -9,13 +9,13 @@ function PerfilCliente() {
 
   const [cliente, setCliente] = useState(null); // Estado para armazenar os dados do cliente
   const [isModalOpen, setModalOpen] = useState(false);
-  
+
   // Função para buscar os dados do cliente
   const fetchCliente = async () => {
     try {
       // Buscar todos os clientes
       const response = await axios.get('http://localhost:3000/clientes');
-      
+
       // Verifica se a resposta contém dados e seleciona o primeiro cliente
       if (response.data && response.data.length > 0) {
         setCliente(response.data[0]); // Atualiza o estado com o primeiro cliente
@@ -79,7 +79,11 @@ function PerfilCliente() {
         </button>
       </div>
 
-      <EditProfileModal isOpen={isModalOpen} onClose={closeModal} />
+      <EditProfileModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        cliente={cliente}
+      />
     </div>
   );
 }

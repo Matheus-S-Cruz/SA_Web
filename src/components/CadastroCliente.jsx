@@ -8,6 +8,7 @@ function CadastroCliente() {
     cpf_cliente: "",
     senha: "",
     senhaRep: "",
+    email: "",
     descricao: "",
     endereco: "",
     complemento: "",
@@ -35,6 +36,7 @@ function CadastroCliente() {
         name: formData.name,
         cpf_cliente: formData.cpf_cliente,
         senha: formData.senha,
+        email: formData.email,
         endereco: formData.endereco,
         descricao: formData.descricao,
         complemento: formData.complemento,
@@ -94,6 +96,16 @@ function CadastroCliente() {
               onChange={handleInputChange}
               placeholder="Repita a senha"
               required
+            />
+          </label>
+
+          <label>
+            <p>Email</p>
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email"
             />
           </label>
 

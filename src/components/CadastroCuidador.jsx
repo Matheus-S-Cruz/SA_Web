@@ -8,6 +8,7 @@ function CadastroCuidador() {
     cpf_cuidador: "",
     senha: "",
     senhaRep: "",
+    email: "",
     descricao: "",
     endereco: "",
     complemento: "",
@@ -35,6 +36,7 @@ function CadastroCuidador() {
         name: formData.name,
         cpf_cuidador: formData.cpf_cuidador,
         senha: formData.senha,
+        email: formData.email,
         endereco: formData.endereco,
         descricao: formData.descricao,
         complemento: formData.complemento,
@@ -104,6 +106,16 @@ function CadastroCuidador() {
               value={formData.descricao}
               onChange={handleInputChange}
               placeholder="Descrição"
+            />
+          </label>
+
+          <label>
+            <p>Email</p>
+            <input
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email"
             />
           </label>
 

@@ -13,7 +13,7 @@ function Servicos() {
                 </div>
 
                 <div className="objetivos">
-                    <p>A equipe Santé é composta por profissionais dedicados e apaixonados que têm um objetivo claro: tornar a busca por uma casa geriátrica uma tarefa mais 
+                    <p>A equipe Santé é composta por apaixonados que têm um objetivo claro: tornar a busca por uma casa geriátrica uma tarefa mais 
                     simples e eficiente. Compreendemos que encontrar o lugar ideal para um ente querido é uma decisão delicada, que envolve não apenas questões logísticas,
                      mas também emocionais.
                     Nosso projeto visa oferecer uma plataforma intuitiva e acessível, onde os clientes podem explorar diversas opções de casas geriátricas.

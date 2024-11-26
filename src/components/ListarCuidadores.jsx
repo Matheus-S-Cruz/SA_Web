@@ -54,6 +54,7 @@ function ListarCuidadores() {
           <tr>
             <th>CPF</th>
             <th>Nome Completo</th>
+            <th>Email</th>
             <th>Descrição</th>
             <th>Endereço</th>
           </tr>
@@ -64,13 +65,14 @@ function ListarCuidadores() {
               <tr key={cuidador.id_cuidador}>
                 <td>{cuidador.cpf_cuidador}</td> {/* Exibe o CPF do cuidador */}
                 <td>{cuidador.name}</td> {/* Exibe o nome do cuidador */}
+                <td>{cuidador.email}</td> {/* Exibe o email do cuidador */}
                 <td>{cuidador.descricao}</td> {/* Exibe a área do cuidador */}
                 <td>{cuidador.endereco}</td> {/* Exibe a instituição do cuidador */}
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="4">Nenhum cuidador encontrado.</td>
+              <td colSpan="5">Nenhum cuidador encontrado.</td>
             </tr>
           )}
         </tbody>

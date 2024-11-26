@@ -36,6 +36,7 @@ function ListarClientes() {
           <tr>
             <th>CPF</th>
             <th>Nome Completo</th>
+            <th>Email</th>
             <th>Descrição</th>
             <th>Endereço</th>
           </tr>
@@ -46,13 +47,14 @@ function ListarClientes() {
               <tr key={cliente.id_cliente}>
                 <td>{cliente.cpf_cliente}</td> {/* Exibe o CPF do cliente */}
                 <td>{cliente.name}</td> {/* Exibe o nome do cliente */}
+                <td>{cliente.email}</td> {/* Exibe o email do cliente */}
                 <td>{cliente.descricao}</td> {/* Exibe a descrição do cliente */}
                 <td>{cliente.endereco}</td> {/* Exibe o endereço do cliente */}
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="4">Nenhum cliente encontrado.</td>
+              <td colSpan="5">Nenhum cliente encontrado.</td>
             </tr>
           )}
         </tbody>

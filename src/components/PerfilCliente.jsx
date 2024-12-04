@@ -41,6 +41,10 @@ function PerfilCliente() {
     return <div>Carregando...</div>; // Exibe um carregamento enquanto os dados não são carregados
   }
 
+  const handleUpdateCliente = (updatedCliente) => {
+    setCliente(updatedCliente); // Atualiza o estado com os dados modificados do cliente
+  };
+
   return (
     <div className="perfil-cliente-container">
       <Sidebar />
@@ -83,6 +87,7 @@ function PerfilCliente() {
         isOpen={isModalOpen}
         onClose={closeModal}
         cliente={cliente}
+        onUpdateCliente={handleUpdateCliente}  // Passando a função para o modal
       />
     </div>
   );

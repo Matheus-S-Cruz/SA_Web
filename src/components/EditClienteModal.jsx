@@ -37,10 +37,16 @@ function EditClienteModal({ isOpen, onClose, cliente, onUpdateCliente }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validação simples de CPF (por exemplo, você pode expandir essa validação)
+    if (!formData.cpf_cliente.match(/^\d{11}$/)) {
+      alert('CPF inválido. O CPF deve ter 11 dígitos.');
+      return;
+    }
+
     try {
       // Atualiza os dados no backend
       const response = await axios.put(
-        `http://localhost:3000/clientes/${cliente.id}`,
+        `http://localhost:3000/clientes/${cliente.id_cliente}`,
         formData
       );
 
@@ -51,7 +57,11 @@ function EditClienteModal({ isOpen, onClose, cliente, onUpdateCliente }) {
       onClose();
     } catch (error) {
       console.error('Erro ao atualizar perfil:', error);
-      alert('Erro ao atualizar o perfil.');
+      if (error.response) {
+        alert(`Erro ao atualizar o perfil: ${error.response.data.error || 'Erro desconhecido'}`);
+      } else {
+        alert('Erro ao atualizar o perfil.');
+      }
     }
   };
 
@@ -120,8 +130,10 @@ function EditClienteModal({ isOpen, onClose, cliente, onUpdateCliente }) {
               onChange={handleInputChange}
             />
           </label>
-          <button type="submit">Salvar</button>
-          <button type="button" onClick={onClose}>Cancelar</button>
+          <div className="form-buttons">
+            <button type="submit">Salvar</button>
+            <button type="button" onClick={onClose}>Cancelar</button>
+          </div>
         </form>
       </div>
     </div>

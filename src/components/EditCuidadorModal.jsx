@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';  // <-- Add this line to import axios
 import '../App.css';
 
 function EditCuidadorModal({ isOpen, onClose, cuidador, onSave }) {
@@ -11,7 +12,6 @@ function EditCuidadorModal({ isOpen, onClose, cuidador, onSave }) {
     complemento: '',
   });
 
-  // Atualiza o estado do formulário com os dados do cuidador quando o modal é aberto
   useEffect(() => {
     if (cuidador) {
       setFormData({
@@ -30,11 +30,28 @@ function EditCuidadorModal({ isOpen, onClose, cuidador, onSave }) {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Chama a função de salvamento (pode ser para o backend ou para o componente pai)
-    onSave(formData);
-    onClose(); // Fecha o modal após salvar
+    if (!formData.cpf_cuidador.match(/^\d{11}$/)) {
+      alert('CPF inválido. O CPF deve ter 11 dígitos.');
+      return;
+    }
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/cuidadores/${cuidador.id_cuidador}`,
+        formData
+      );
+      onSave(response.data);
+      alert('Perfil atualizado com sucesso!');
+      onClose();
+    } catch (error) {
+      console.error('Erro ao atualizar perfil:', error);
+      if (error.response) {
+        alert(`Erro ao atualizar o perfil: ${error.response.data.error || 'Erro desconhecido'}`);
+      } else {
+        alert('Erro ao atualizar o perfil.');
+      }
+    }
   };
 
   if (!isOpen) return null;
@@ -101,8 +118,10 @@ function EditCuidadorModal({ isOpen, onClose, cuidador, onSave }) {
               onChange={handleInputChange}
             />
           </label>
-          <button type="submit">Salvar</button>
-          <button type="button" onClick={onClose}>Cancelar</button>
+          <div className="form-buttons">
+            <button type="submit">Salvar</button>
+            <button type="button" onClick={onClose}>Cancelar</button>
+          </div>
         </form>
       </div>
     </div>
